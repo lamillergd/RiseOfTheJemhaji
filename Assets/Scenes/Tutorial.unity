@@ -222,6 +222,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Node (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: sceneName
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: map
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3560720746800896511, guid: 82ce3621b4e73a341bc095cc1e9b0054,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,36 +307,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: sceneName
-      value: Tutorial Combat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: map
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeNumber
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ce3621b4e73a341bc095cc1e9b0054, type: 3}
 --- !u!1001 &1238567716
@@ -321,6 +321,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Node
       objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: sceneName
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: map
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: isCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.data[0]
+      value: 
+      objectReference: {fileID: 946058230}
     - target: {fileID: 3560720746800896511, guid: 82ce3621b4e73a341bc095cc1e9b0054,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -376,46 +416,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: sceneName
-      value: None
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: map
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeNumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: isCompleted
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.data[0]
-      value: 
-      objectReference: {fileID: 946058230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ce3621b4e73a341bc095cc1e9b0054, type: 3}
 --- !u!1 &1256432768
@@ -521,6 +521,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Node (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodesToUnlock.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: sceneName
+      value: Tutorial Combat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: map
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodeNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: nodesToUnlock.Array.data[0]
+      value: 
+      objectReference: {fileID: 421889851}
+    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
+        type: 3}
+      propertyPath: unlockWhenCompleted.Array.data[0]
+      value: 
+      objectReference: {fileID: 421889851}
     - target: {fileID: 3560720746800896511, guid: 82ce3621b4e73a341bc095cc1e9b0054,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -576,51 +621,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodesToUnlock.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: sceneName
-      value: Tutorial Combat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: map
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodeNumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: nodesToUnlock.Array.data[0]
-      value: 
-      objectReference: {fileID: 421889851}
-    - target: {fileID: 3560720746800896508, guid: 82ce3621b4e73a341bc095cc1e9b0054,
-        type: 3}
-      propertyPath: unlockWhenCompleted.Array.data[0]
-      value: 
-      objectReference: {fileID: 421889851}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ce3621b4e73a341bc095cc1e9b0054, type: 3}
 --- !u!1 &1633430496

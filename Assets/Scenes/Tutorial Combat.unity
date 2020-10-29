@@ -170,10 +170,10 @@ MonoBehaviour:
   playerImage: {fileID: 135064220}
   featPrefabs:
   - {fileID: 1898913675}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1772120147}
+  - {fileID: 605802513}
+  - {fileID: 1794849969}
+  - {fileID: 1587874251}
 --- !u!1 &135064220
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//FOR TESTING
+using UnityEngine.SceneManagement;
 
 public class AbilitySetup : MonoBehaviour
 {
@@ -49,6 +51,13 @@ public class AbilitySetup : MonoBehaviour
         if(isFiring)
         {
             OnCooldown();
+        }
+
+        //FOR TESTING
+        if (enemy.currentHealth <= 0)
+        {
+            Manager.instance.currentNode.isCompleted = true;
+            SceneManager.LoadScene("Tutorial");
         }
     }
 

@@ -9,6 +9,8 @@ public class Manager : MonoBehaviour
     public int health;
     public int mana;
 
+    public GameObject nodeObject;
+    public MapNode currentNode;
 
     void Awake()
     {
@@ -31,9 +33,12 @@ public class Manager : MonoBehaviour
 
     }
 
-
     void Update()
     {
-
+        if (nodeObject != null)
+        {
+            currentNode = nodeObject.GetComponent<MapNode>();
+            nodeObject.SetActive(false);
+        }
     }
 }

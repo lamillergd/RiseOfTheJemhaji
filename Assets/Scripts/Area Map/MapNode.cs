@@ -30,9 +30,13 @@ public class MapNode : MonoBehaviour
     public List<MapNode> unlockWhenCompleted = new List<MapNode>();
     SpriteRenderer sr;
 
+    public GameObject levelLoaderObj;
+    LevelLoader levelLoader;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        levelLoader = levelLoaderObj.GetComponent<LevelLoader>();
         switch ((int)nodeType)
         {
             case 0:
@@ -108,8 +112,7 @@ public class MapNode : MonoBehaviour
             {
                 Manager.instance.nodeObject = this.gameObject;
                 DontDestroyOnLoad(Manager.instance.nodeObject);
-                //Change to ASync load
-                SceneManager.LoadScene(sceneName);
+                levelLoader.LoadLevel(sceneName);
             }
             else
             {

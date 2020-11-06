@@ -24,12 +24,12 @@ public class MapNode : MonoBehaviour
     public bool isCompleted;
     public GameObject unlockedImage;
     public string sceneName;
-    public int nodeNumber;
     public NodeType nodeType;
     public List<Sprite> nodeImage = new List<Sprite>();
     public List<MapNode> unlockWhenCompleted = new List<MapNode>();
     SpriteRenderer sr;
 
+    [Header("Level/Scene Loading")]
     public GameObject levelLoaderObj;
     LevelLoader levelLoader;
 
@@ -50,8 +50,6 @@ public class MapNode : MonoBehaviour
             //Safe Node
             case 2:
                 sr.sprite = nodeImage[1];
-                isCompleted = true;
-                isUnlocked = true;
                 break;
             //Portal Node
             case 3:

@@ -6,9 +6,17 @@ public class Manager : MonoBehaviour
 {
     public static Manager instance;
 
+    [Header("Player Info")]
+    public string playerName;
+    public string playerClass;
+    public string appearance;
+
+    [Header("Player Stats")]
+    public int level;
     public int health;
     public int mana;
 
+    [Header("Map Info")]
     public GameObject nodeObject;
     public MapNode currentNode;
 
@@ -26,6 +34,7 @@ public class Manager : MonoBehaviour
 
         health = 100;
         mana = 100;
+        level = 1;
     }
 
     void Start()

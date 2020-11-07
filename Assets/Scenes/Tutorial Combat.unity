@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &68633284
 MonoBehaviour:
@@ -167,7 +167,7 @@ MonoBehaviour:
   currentMana: 0
   maxHealth: 0
   currentHealth: 0
-  playerImage: {fileID: 135064220}
+  playerImage: {fileID: 895905450}
   featPrefabs:
   - {fileID: 1898913675}
   - {fileID: 1772120147}
@@ -2174,7 +2174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1329390163
 MonoBehaviour:
@@ -2188,6 +2188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8157ea2a4da630547b943e47c16522ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  playerClass: 
+  appearance: 
+  level: 0
   health: 0
   mana: 0
   nodeObject: {fileID: 0}
@@ -2221,7 +2225,7 @@ Transform:
   m_Children:
   - {fileID: 301700670}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1434675146
 GameObject:

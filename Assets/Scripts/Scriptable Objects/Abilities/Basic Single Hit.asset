@@ -18,7 +18,9 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 5c56b7c5e21960c41bc7aac6366d655d, type: 3}
   cooldownImage: {fileID: 0}
   manaCost: 5
-  dmg: 5
+  x: 5
+  y: 0
+  z: 0
   cooldown: 5
   duration: 0
   noOfTargets: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Damage Ability", menuName = "Abilities/Damage Ability")]
-public class Ability : ScriptableObject
+public class AbilitySO : ScriptableObject
 {
     public enum DamageAbilityType
     {
@@ -17,15 +17,19 @@ public class Ability : ScriptableObject
     [Header("General")]
     public new string name;
     public string descritpion;
+    //will be able to get rid of below line
     public DamageAbilityType type;
 
     public Sprite artwork;
     public Image cooldownImage;
 
     public int manaCost;
-    public int dmg;
+    public int x;
+    public int y;
+    public int z;
     public int cooldown;
 
+    //will be able to get rid of below line
     [Header("Damage Over Time ONLY")]
     public int duration;
 

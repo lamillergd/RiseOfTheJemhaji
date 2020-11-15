@@ -163,17 +163,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80032da68f517cf4bb4159f44021bfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerClass: 
+  playerAppearance: 
   maxMana: 0
   currentMana: 0
   maxHealth: 0
   currentHealth: 0
   playerImage: {fileID: 895905450}
   featPrefabs:
-  - {fileID: 1898913675}
-  - {fileID: 1772120147}
-  - {fileID: 605802513}
-  - {fileID: 1794849969}
-  - {fileID: 1587874251}
+  - {fileID: 8202829319096901200}
+  - {fileID: 1486718043598598515}
+  - {fileID: 439526634}
+  - {fileID: 2110268704}
+  - {fileID: 1598374320}
 --- !u!1 &135064220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,7 +3675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4706661df8925a4fab253e3e4e6e8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: e0074b0bc8deb214fbc5adc06f643772, type: 2}
+  ability: {fileID: 11400000, guid: 421c013d0fe473645a4e7099843075cf, type: 2}
   artwork: {fileID: 1486718044686552474}
   cooldownImage: {fileID: 1486718044287318747}
   damageType: 0
@@ -4292,7 +4294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4706661df8925a4fab253e3e4e6e8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: 421c013d0fe473645a4e7099843075cf, type: 2}
+  ability: {fileID: 11400000, guid: e0074b0bc8deb214fbc5adc06f643772, type: 2}
   artwork: {fileID: 8202829320323821346}
   cooldownImage: {fileID: 8202829320120806058}
   damageType: 0

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class AbilitySetup : MonoBehaviour
 {
     [Header("ScriptableObject")]
-    public Ability ability;
+    public AbilitySO ability;
     public Image artwork;
     public Image cooldownImage;
     public int damageType;
@@ -32,7 +32,7 @@ public class AbilitySetup : MonoBehaviour
     {
         artwork.sprite = ability.artwork;
         manaCost = ability.manaCost;
-        damage = ability.dmg;
+        damage = ability.x;
         damageType = (int)ability.type;
         cooldown = ability.cooldown;
         duration = ability.duration;
@@ -86,7 +86,7 @@ public class AbilitySetup : MonoBehaviour
         }
     }
 
-    public void DealDamage()
+    private void DealDamage()
     {
         switch (damageType)
         {

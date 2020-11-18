@@ -12,9 +12,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
     public GameObject playerImage;
-
-    [SerializeField]
-    private GameObject[] featPrefabs;
+    public List<GameObject> availableAbilties;
 
     void Awake()
     {

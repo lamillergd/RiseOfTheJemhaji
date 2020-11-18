@@ -75,12 +75,5 @@ public class ScoreSystem : MonoBehaviour
         {
             Player.instance.currentHealth = 0;
         }
-
-        //FOR TESTING
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(5);
-        }
-        //    ******
     }
 }

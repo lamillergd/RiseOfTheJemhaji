@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a6647fb4c2c4d24fbc1b4297db5adb4, type: 3}
-  m_Name: Basic Enemy
+  m_Name: Basic Enemy 2
   m_EditorClassIdentifier: 
-  name: Test
+  name: Basic Enemy 2
   enemyID: 0
-  appearance: {fileID: 21300000, guid: a219f3d3d5a4fd24287041921f22e74e, type: 3}
+  appearance: {fileID: 21300000, guid: 162181dc40caad54ebde25bb821db021, type: 3}
   dmg: 1
-  maxHealth: 20
+  maxHealth: 30

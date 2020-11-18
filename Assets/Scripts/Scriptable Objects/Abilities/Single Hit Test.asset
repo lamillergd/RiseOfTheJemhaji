@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d5206de8e22c1d4e9a752b2fa35bb56, type: 3}
-  m_Name: Basic DOT
+  m_Name: Single Hit Test
   m_EditorClassIdentifier: 
-  name: Basic DOT
-  descritpion: Deal 10 damage and gain health
-  type: 1
-  artwork: {fileID: 21300000, guid: a1bf967fe8ff15041b96200e52b73720, type: 3}
-  cooldownImage: {fileID: 0}
-  manaCost: 15
-  x: 10
+  name: Single Hit Test
+  classType: 0
+  icon: {fileID: 21300000, guid: 15a4d1cfd67230641b3cb59a4e79a168, type: 3}
+  manaCost: 5
+  x: 5
   y: 0
   z: 0
-  cooldown: 7
-  duration: 5
+  cooldown: 5
+  duration: 0
   noOfTargets: 1

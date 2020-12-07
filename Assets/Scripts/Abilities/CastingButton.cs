@@ -6,16 +6,16 @@ using UnityEngine.UI;
 
 public class CastingButton : MonoBehaviour
 {
+    public CastingButton instance;
     public Image cooldownImage;
     public int cooldownTime;
-    public bool onCooldown;
 
     public Stopwatch cooldownTimer;
 
     void Start()
     {
+        instance = this;
         cooldownImage.fillAmount = 0;
-        onCooldown = false;
     }
 
     public void StartCooldown()

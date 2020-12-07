@@ -26,4 +26,12 @@ public class MainMenuButtons : MonoBehaviour
         mainMenu.SetActive(false);
         settings.SetActive(true);
     }
+
+    public void CloseAndSaveSettings()
+    {
+        //Save settings on screen close
+        Debug.Log("Saved settings");
+        mainMenu.SetActive(true);
+        settings.SetActive(false);
+    }
 }

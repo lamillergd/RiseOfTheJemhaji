@@ -652,9 +652,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2132237103}
-  - {fileID: 1086634711}
   - {fileID: 870064651}
   - {fileID: 2024997190}
+  - {fileID: 1086634711}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -878,9 +878,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39827b78ba0b804aba321f08e5d5224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   cooldownImage: {fileID: 206680021}
   cooldownTime: 0
-  onCooldown: 0
 --- !u!1 &248139681
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,16 +931,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4774fd1d0a7859347aec9e4977d48d98, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 77
     m_Alignment: 4
@@ -1399,9 +1399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39827b78ba0b804aba321f08e5d5224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   cooldownImage: {fileID: 1306501318}
   cooldownTime: 0
-  onCooldown: 0
 --- !u!1 &461757936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1770,7 @@ RectTransform:
   - {fileID: 1954057119}
   - {fileID: 890732648}
   m_Father: {fileID: 199155057}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2089,9 +2089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39827b78ba0b804aba321f08e5d5224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   cooldownImage: {fileID: 1064411252}
   cooldownTime: 0
-  onCooldown: 0
 --- !u!1 &909805793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,16 +2300,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4774fd1d0a7859347aec9e4977d48d98, type: 3}
     m_FontSize: 22
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 77
     m_Alignment: 4
@@ -2547,7 +2547,7 @@ PrefabInstance:
     - target: {fileID: 2963058439590898989, guid: 13a1fb7f946a1ba4687559b2de255be0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2963058439590898989, guid: 13a1fb7f946a1ba4687559b2de255be0,
         type: 3}
@@ -3201,9 +3201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39827b78ba0b804aba321f08e5d5224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   cooldownImage: {fileID: 109140380}
   cooldownTime: 0
-  onCooldown: 0
 --- !u!1 &1597450680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,9 +3665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39827b78ba0b804aba321f08e5d5224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   cooldownImage: {fileID: 1011636011}
   cooldownTime: 0
-  onCooldown: 0
 --- !u!1 &2003231121
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,7 +3730,7 @@ RectTransform:
   m_Children:
   - {fileID: 1597450681}
   m_Father: {fileID: 199155057}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

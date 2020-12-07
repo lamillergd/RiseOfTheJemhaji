@@ -60,8 +60,7 @@ public class CombatManager : MonoBehaviour
 
         if (allDead)
         {
-            combatOverScreen.SetActive(true);
-            Manager.instance.currentNode.isCompleted = true;
+            StartCoroutine(CombatOver());
         }
     }
 
@@ -69,8 +68,13 @@ public class CombatManager : MonoBehaviour
     {
         combatOverScreen.SetActive(false);
         combatUI.SetActive(false);
-
         levelLoader.LoadLevel(mapName);
     }
-
+    
+    IEnumerator CombatOver()
+    {
+        yield return new WaitForSeconds(0.25f);
+        combatOverScreen.SetActive(true);
+        Manager.instance.currentNode.isCompleted = true;
+    }
 }

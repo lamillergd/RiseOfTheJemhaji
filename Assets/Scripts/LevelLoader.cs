@@ -9,7 +9,12 @@ public class LevelLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider slider;
     public Text progressText;
-    
+
+    void Start()
+    {
+        loadingScreen.SetActive(false);
+    }
+
     public void LoadLevel(string sceneName)
     {
         StartCoroutine(LoadAsync(sceneName));

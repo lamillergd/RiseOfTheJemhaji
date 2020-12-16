@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public string playerName;
     public string playerClass;
     public string appearance;
+    public InventorySO inventory;
 
     [Header("Player Stats")]
     public int level;
@@ -49,5 +50,10 @@ public class Manager : MonoBehaviour
             currentNode = nodeObject.GetComponent<MapNode>();
             nodeObject.SetActive(false);
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        inventory.container.Clear();
     }
 }

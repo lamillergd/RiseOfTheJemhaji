@@ -309,6 +309,9 @@ MonoBehaviour:
   sprite: {fileID: 3995897880239418708}
   damage: 0
   maxHealth: 0
+  lootTable:
+  - {fileID: 11400000, guid: b672416574177b5419164dd03739aed8, type: 2}
+  - {fileID: 11400000, guid: 8cab2c1ec1da9b64e9bc04403f46a752, type: 2}
   currentHealth: 0
   healthSlider: {fileID: 3995897878451042095}
   playerObj: {fileID: 0}

@@ -14,6 +14,9 @@ public class Enemy : MonoBehaviour
     //For when enemy special attacks are implemented
     //public GameObject specialAttack;
 
+    [Header("Loot Table")]
+    public List<ItemSO> lootTable = new List<ItemSO>();
+
     [Header("General")]
     public int currentHealth;
     public Slider healthSlider;

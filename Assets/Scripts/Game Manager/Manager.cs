@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Manager : MonoBehaviour
@@ -23,6 +24,7 @@ public class Manager : MonoBehaviour
 
     void Awake()
     {
+
         if (instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -54,6 +56,17 @@ public class Manager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        inventory.Save();
+        //for testing new game and continue game stuff (inv only atm)
+        //File.Delete(string.Concat(Application.persistentDataPath, inventory.savePath));
         inventory.container.Clear();
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            inventory.Save();
+        }
     }
 }

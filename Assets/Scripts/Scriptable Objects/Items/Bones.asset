@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c199ace45dbf247ae1263ac2294c20, type: 3}
   m_Name: Bones
   m_EditorClassIdentifier: 
-  prefab: {fileID: 817397684559864770, guid: 6fe37e22e908c05468ceed6f69d2df94, type: 3}
+  Id: 0
+  uiDisplay: {fileID: 21300000, guid: 97b7999e7b31e56439ce3181e94e5c85, type: 3}
   type: 2
   description: Big ol' pile of bones!

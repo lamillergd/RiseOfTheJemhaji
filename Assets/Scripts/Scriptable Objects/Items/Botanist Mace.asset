@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1773eaa32b5f2cf45b58aec9d4df6d5e, type: 3}
   m_Name: Botanist Mace
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4535925411402478493, guid: 2e6d924b836371942b6770fa18b97cc8, type: 3}
+  Id: 1
+  uiDisplay: {fileID: 21300000, guid: db95c6661171b9e4aafdf4de7ce8b5e1, type: 3}
   type: 1
   description: The mace for a Botanist
-  attackBonus: 12
-  defenceBonus: 0
+  buffs:
+  - attribute: 1
+    min: 5
+    max: 15
+    value: 0

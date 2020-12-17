@@ -59,7 +59,7 @@ public class Manager : MonoBehaviour
         inventory.Save();
         //for testing new game and continue game stuff (inv only atm)
         //File.Delete(string.Concat(Application.persistentDataPath, inventory.savePath));
-        inventory.container.Clear();
+        inventory.container.items.Clear();
     }
 
     private void OnApplicationFocus(bool focus)

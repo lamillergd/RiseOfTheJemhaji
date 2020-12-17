@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebc11f3b45072f43be33cd99d6271a3, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5075963598224710576, guid: 34a43a4d3fbdab24fb124fe13966f8fa, type: 3}
+  Id: 2
+  uiDisplay: {fileID: 21300000, guid: 9d58ad8934cd52a45ae84ea9c4786833, type: 3}
   type: 0
   description: Tasty fish
   restoreHealthValue: 16

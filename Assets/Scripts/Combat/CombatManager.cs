@@ -80,7 +80,7 @@ public class CombatManager : MonoBehaviour
 
         for (int i = 0; i < totalLoot.Count; i++)
         {
-            Manager.instance.inventory.AddItem(totalLoot[i], 1);
+            Manager.instance.inventory.AddItem(new Item(totalLoot[i]), 1);
             totalLoot.Remove(totalLoot[i]);
         }
 

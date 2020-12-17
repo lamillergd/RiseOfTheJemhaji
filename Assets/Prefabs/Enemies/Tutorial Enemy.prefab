@@ -311,7 +311,8 @@ MonoBehaviour:
   maxHealth: 0
   lootTable:
   - {fileID: 11400000, guid: b672416574177b5419164dd03739aed8, type: 2}
-  - {fileID: 11400000, guid: 8cab2c1ec1da9b64e9bc04403f46a752, type: 2}
+  - {fileID: 11400000, guid: bce518156d3e4c44a80f68821da8d6ec, type: 2}
+  - {fileID: 11400000, guid: f1a6882e0d77e6b42bf24c2988955921, type: 2}
   currentHealth: 0
   healthSlider: {fileID: 3995897878451042095}
   playerObj: {fileID: 0}

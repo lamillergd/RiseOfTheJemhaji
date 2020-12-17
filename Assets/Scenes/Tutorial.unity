@@ -4345,6 +4345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82a278bad30656c46996046db17c535f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryPrefab: {fileID: 3235579326134023864, guid: 495d06c30bc7e4c469b45a55455caad5,
+    type: 3}
   inventory: {fileID: 11400000, guid: 5b6101cc3a2fb2247b5c05f0eb414d64, type: 2}
   X_START: -487
   Y_START: 122

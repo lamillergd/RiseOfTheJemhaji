@@ -6,22 +6,23 @@ using UnityEngine;
 public class ItemDatabaseSO : ScriptableObject, ISerializationCallbackReceiver
 {
     public ItemSO[] items;
-    public Dictionary<ItemSO, int> getId = new Dictionary<ItemSO, int>();
+    //public Dictionary<ItemSO, int> getId = new Dictionary<ItemSO, int>();
     public Dictionary<int, ItemSO> getItem = new Dictionary<int, ItemSO>();
 
     public void OnAfterDeserialize()
     {
-        getId = new Dictionary<ItemSO, int>();
-        getItem = new Dictionary<int, ItemSO>();
+        //getId = new Dictionary<ItemSO, int>();
+        //getItem = new Dictionary<int, ItemSO>();
         for (int i = 0; i < items.Length; i++)
         {
-            getId.Add(items[i], i);
+            //getId.Add(items[i], i);
+            items[i].Id = i;
             getItem.Add(i, items[i]);
         }
     }
 
     public void OnBeforeSerialize()
     {
-        
+        getItem = new Dictionary<int, ItemSO>();
     }
 }

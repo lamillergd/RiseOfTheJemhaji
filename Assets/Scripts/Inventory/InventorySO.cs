@@ -18,19 +18,52 @@ public class InventorySO : ScriptableObject, ISerializationCallbackReceiver
     {
         if (_item.buffs.Length > 0)
         {
-            container.items.Add(new InventorySlot(_item.id, _item, _amount));
+            SetEmptySlot(_item, _amount);
             return;
         }
 
-        for (int i = 0; i < container.items.Count; i++)
+        for (int i = 0; i < container.items.Length; i++)
         {
-            if (container.items[i].item.id == _item.id)
+            if (container.items[i].id == _item.id)
             {
                 container.items[i].AddAmount(_amount);
                 return;
             }
         }
-        container.items.Add(new InventorySlot(_item.id, _item, _amount));
+        SetEmptySlot(_item, _amount);
+    }
+
+    public InventorySlot SetEmptySlot(Item _item, int _amount)
+    {
+        for (int i = 0; i < container.items.Length; i++)
+        {
+            if (container.items[i].id <= -1)
+            {
+                container.items[i].UpdateSlot(_item.id, _item, _amount);
+                return container.items[i];
+            }
+        }
+
+        //functionality for what happens when inv is full
+        return null;
+    }
+
+    public void MoveItem(InventorySlot item1, InventorySlot item2)
+    {
+        InventorySlot temp = new InventorySlot(item2.id, item2.item, item2.amount);
+        item2.UpdateSlot(item1.id, item1.item, item1.amount);
+        item1.UpdateSlot(temp.id, temp.item, temp.amount);
+    }
+
+    public void RemoveItem(Item _item)
+    {
+        for (int i = 0; i < container.items.Length; i++)
+        {
+            if (container.items[i].item == _item)
+            {
+                container.items[i].UpdateSlot(-1, null, 0);
+            }
+        }
     }
 
     [ContextMenu("Save")]
@@ -78,9 +111,16 @@ public class InventorySO : ScriptableObject, ISerializationCallbackReceiver
 [System.Serializable]
 public class InventorySlot
 {
-    public int id;
+    public int id = -1;
     public Item item;
     public int amount;
+
+    public InventorySlot()
+    {
+        id = -1;
+        item = null;
+        amount = 0;
+    }
 
     public InventorySlot(int _id, Item _item, int _amount)
     {
@@ -93,10 +133,18 @@ public class InventorySlot
     {
         amount += value;
     }
+
+    public void UpdateSlot (int _id, Item _item, int _amount)
+    {
+        id = _id;
+        item = _item;
+        amount = _amount;
+    }
 }
 
 [System.Serializable]
 public class Inventory
 {
-    public List<InventorySlot> items = new List<InventorySlot>();
+    //public List<InventorySlot> items = new List<InventorySlot>();
+    public InventorySlot[] items = new InventorySlot[35];
 }

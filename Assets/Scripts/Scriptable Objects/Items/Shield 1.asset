@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 5
   uiDisplay: {fileID: 21300000, guid: 413793394cbcf35479737d974bdf0c16, type: 3}
-  type: 1
+  type: 6
   description: Another shield
   buffs:
   - attribute: 0

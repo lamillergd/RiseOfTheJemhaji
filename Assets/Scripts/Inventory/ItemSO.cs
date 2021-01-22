@@ -5,7 +5,12 @@ using UnityEngine;
 public enum ItemType
 {
     Food,
-    Equipment,
+    Chest,
+    Legs,
+    Boots,
+    Gloves,
+    Weapon,
+    Shield,
     Default
 }
 
@@ -39,6 +44,12 @@ public class Item
     public string name;
     public int id;
     public ItemBuff[] buffs;
+
+    public Item()
+    {
+        name = "";
+        id = -1;
+    }
 
     public Item(ItemSO item)
     {

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 1
   uiDisplay: {fileID: 21300000, guid: db95c6661171b9e4aafdf4de7ce8b5e1, type: 3}
-  type: 1
+  type: 5
   description: The mace for a Botanist
   buffs:
   - attribute: 1

@@ -91,7 +91,7 @@ public class InventorySO : ScriptableObject, ISerializationCallbackReceiver
     [ContextMenu("Clear")]
     public void ClearInventory()
     {
-        container = new Inventory();
+        container.Clear();
     }
 
     public void OnAfterDeserialize()
@@ -111,6 +111,8 @@ public class InventorySO : ScriptableObject, ISerializationCallbackReceiver
 [System.Serializable]
 public class InventorySlot
 {
+    public ItemType[] allowedItems = new ItemType[0];
+    public UserInterface parent;
     public int id = -1;
     public Item item;
     public int amount;
@@ -140,6 +142,22 @@ public class InventorySlot
         item = _item;
         amount = _amount;
     }
+
+    public bool CanPlaceInSlot(ItemSO _item)
+    {
+        if (allowedItems.Length <= 0)
+        {
+            return true;
+        }
+        for (int i = 0; i < allowedItems.Length; i++)
+        {
+            if (_item.type == allowedItems[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 [System.Serializable]
@@ -147,4 +165,12 @@ public class Inventory
 {
     //public List<InventorySlot> items = new List<InventorySlot>();
     public InventorySlot[] items = new InventorySlot[35];
+
+    public void Clear()
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            items[i].UpdateSlot(-1, new Item(), 0);
+        }
+    }
 }

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 0
   uiDisplay: {fileID: 21300000, guid: 97b7999e7b31e56439ce3181e94e5c85, type: 3}
-  type: 2
+  type: 7
   description: Big ol' pile of bones!
+  buffs: []

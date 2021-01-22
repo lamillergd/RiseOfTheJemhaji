@@ -37,12 +37,16 @@ public class MainMenuButtons : MonoBehaviour
         charCreation.SetActive(true);
 
         File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.inventory.savePath));
-        Manager.instance.inventory.container.items = new InventorySlot[35];
+        File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.equipment.savePath));
+        //Manager.instance.inventory.container.items = new InventorySlot[35];
+        Manager.instance.inventory.container.Clear();
+        Manager.instance.equipment.container.Clear();
     }
 
     public void LoadGame()
     {
         Manager.instance.inventory.Load();
+        Manager.instance.equipment.Load();
     }
 
     public void ShowSettings()

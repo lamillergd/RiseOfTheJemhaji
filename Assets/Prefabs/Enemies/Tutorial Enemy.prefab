@@ -312,7 +312,11 @@ MonoBehaviour:
   lootTable:
   - {fileID: 11400000, guid: b672416574177b5419164dd03739aed8, type: 2}
   - {fileID: 11400000, guid: bce518156d3e4c44a80f68821da8d6ec, type: 2}
-  - {fileID: 11400000, guid: f1a6882e0d77e6b42bf24c2988955921, type: 2}
+  - {fileID: 11400000, guid: 8364cdd9e5eecf54c8355fe2b2bf0138, type: 2}
+  - {fileID: 11400000, guid: a681b197d0bc47347bf0109e4624a5f1, type: 2}
+  - {fileID: 11400000, guid: 06a6583420db6ea479ba00014d816793, type: 2}
+  - {fileID: 11400000, guid: 1022ca7771aaaf24e81f6699b9bb5061, type: 2}
+  - {fileID: 11400000, guid: da0d2b8f1f37f564b8c3556fedb7bc03, type: 2}
   currentHealth: 0
   healthSlider: {fileID: 3995897878451042095}
   playerObj: {fileID: 0}

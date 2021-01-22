@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1773eaa32b5f2cf45b58aec9d4df6d5e, type: 3}
-  m_Name: Myconist Mace
+  m_Name: M_Chest
   m_EditorClassIdentifier: 
-  Id: 3
-  uiDisplay: {fileID: 21300000, guid: 14a41206a5675f44096ff708cf5fa63f, type: 3}
+  Id: 7
+  uiDisplay: {fileID: 21300000, guid: d64e928546296ab4f91224cc4c5646fb, type: 3}
   type: 1
-  description: The mace for a Myconist
+  description: 
   buffs:
-  - attribute: 1
-    min: 10
-    max: 20
+  - attribute: 0
+    min: 5
+    max: 15
     value: 0

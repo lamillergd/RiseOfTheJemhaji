@@ -786,6 +786,7 @@ MonoBehaviour:
   playerClass: 
   appearance: 
   inventory: {fileID: 11400000, guid: 5b6101cc3a2fb2247b5c05f0eb414d64, type: 2}
+  equipment: {fileID: 11400000, guid: a1c6bc7467fd76b4db7c4b49a277bb51, type: 2}
   level: 0
   health: 0
   mana: 0

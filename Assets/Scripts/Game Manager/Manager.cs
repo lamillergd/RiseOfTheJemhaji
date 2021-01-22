@@ -6,12 +6,14 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
     public static Manager instance;
+    public MouseItem mouseItem = new MouseItem();
 
     [Header("Player Info")]
     public string playerName;
     public string playerClass;
     public string appearance;
     public InventorySO inventory;
+    public InventorySO equipment;
 
     [Header("Player Stats")]
     public int level;
@@ -57,8 +59,12 @@ public class Manager : MonoBehaviour
     private void OnApplicationQuit()
     {
         inventory.Save();
+        equipment.Save();
         //for testing new game and continue game stuff (inv only atm)
         //File.Delete(string.Concat(Application.persistentDataPath, inventory.savePath));
+        //File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.equipment.savePath));
+
+        equipment.container.items = new InventorySlot[6];
         inventory.container.items = new InventorySlot[35];
     }
 
@@ -67,6 +73,7 @@ public class Manager : MonoBehaviour
         if (!focus)
         {
             inventory.Save();
+            equipment.Save();
         }
     }
 }

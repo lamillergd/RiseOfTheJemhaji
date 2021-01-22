@@ -7,6 +7,6 @@ public class EquipItemSO : ItemSO
 {
     public void Awake()
     {
-        type = ItemType.Equipment;
+        type = ItemType.Chest;
     }
 }

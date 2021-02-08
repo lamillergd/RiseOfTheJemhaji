@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1773eaa32b5f2cf45b58aec9d4df6d5e, type: 3}
   m_Name: M_Boots
   m_EditorClassIdentifier: 
-  Id: 6
   uiDisplay: {fileID: 21300000, guid: 537fe11c62963f143a8140a2ac151a36, type: 3}
+  isStackable: 0
   type: 3
   description: 
-  buffs:
-  - attribute: 0
-    min: 5
-    max: 10
-    value: 0
+  data:
+    name: 
+    id: 5
+    buffs:
+    - attribute: 2
+      min: 1
+      max: 5
+      value: 0
+    - attribute: 3
+      min: 1
+      max: 5
+      value: 0

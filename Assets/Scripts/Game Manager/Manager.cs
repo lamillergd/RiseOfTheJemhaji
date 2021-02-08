@@ -6,17 +6,16 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
     public static Manager instance;
-    public MouseItem mouseItem = new MouseItem();
 
     [Header("Player Info")]
     public string playerName;
-    public string playerClass;
+    public PlayerClasses playerClass;
     public string appearance;
+    public int level;
     public InventorySO inventory;
     public InventorySO equipment;
 
     [Header("Player Stats")]
-    public int level;
     public int health;
     public int mana;
 
@@ -24,9 +23,10 @@ public class Manager : MonoBehaviour
     public GameObject nodeObject;
     public MapNode currentNode;
 
+    public List<ItemSO> lootToAdd = new List<ItemSO>();
+
     void Awake()
     {
-
         if (instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -44,7 +44,7 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
-
+  
     }
 
     void Update()
@@ -60,12 +60,13 @@ public class Manager : MonoBehaviour
     {
         inventory.Save();
         equipment.Save();
+
         //for testing new game and continue game stuff (inv only atm)
         //File.Delete(string.Concat(Application.persistentDataPath, inventory.savePath));
-        //File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.equipment.savePath));
+        //File.Delete(string.Concat(Application.persistentDataPath, equipment.savePath));
 
-        equipment.container.items = new InventorySlot[6];
-        inventory.container.items = new InventorySlot[35];
+        inventory.Clear();
+        equipment.Clear();
     }
 
     private void OnApplicationFocus(bool focus)

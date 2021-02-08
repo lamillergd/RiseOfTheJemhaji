@@ -8,14 +8,14 @@ public class DynamicInterface : UserInterface
     public GameObject inventoryPrefab;
     public int X_START;
     public int Y_START;
-    public int X_SPACE_BETWEEN_ITEM;
-    public int NUMBER_OF_COLUMN;
-    public int Y_SPACE_BETWEEN_ITEM;
+    public int X_SPACE_BETWEEN_ITEMS;
+    public int NUMBER_OF_COLS;
+    public int Y_SPACE_BETWEEN_ITEMS;
 
     public override void CreateSlots()
     {
-        itemsDisplayed = new Dictionary<GameObject, InventorySlot>();
-        for (int i = 0; i < inventory.container.items.Length; i++)
+        slotsOnInterface = new Dictionary<GameObject, InventorySlot>();
+        for (int i = 0; i < inventory.GetSlots.Length; i++)
         {
             var obj = Instantiate(inventoryPrefab, Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPos(i);
@@ -26,12 +26,14 @@ public class DynamicInterface : UserInterface
             AddEvent(obj, EventTriggerType.EndDrag, delegate { OnDragEnd(obj); });
             AddEvent(obj, EventTriggerType.Drag, delegate { OnDrag(obj); });
 
-            itemsDisplayed.Add(obj, inventory.container.items[i]);
+            inventory.GetSlots[i].slotDisplay = obj;
+
+            slotsOnInterface.Add(obj, inventory.GetSlots[i]);
         }
     }
 
     private Vector3 GetPos(int i)
     {
-        return new Vector3(X_START + (X_SPACE_BETWEEN_ITEM * (i % NUMBER_OF_COLUMN)), Y_START + (-Y_SPACE_BETWEEN_ITEM * (i / NUMBER_OF_COLUMN)), 0f);
+        return new Vector3(X_START + (X_SPACE_BETWEEN_ITEMS * (i % NUMBER_OF_COLS)), Y_START + (-Y_SPACE_BETWEEN_ITEMS * (i / NUMBER_OF_COLS)), 0f);
     }
 }

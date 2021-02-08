@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80032da68f517cf4bb4159f44021bfd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerClass: 
+  playerClass: 0
   playerAppearance: 
   maxMana: 0
   currentMana: 0
@@ -171,10 +171,10 @@ MonoBehaviour:
   currentHealth: 0
   playerImage: {fileID: 895905450}
   availableAbilties:
-  - {fileID: 3672180540838158942, guid: cdca4711e8bb47546bc4d79d991c696d, type: 3}
-  - {fileID: 1538314054844407505, guid: d35f7e43a4aa8814aa70278e81f23dcc, type: 3}
   - {fileID: 2016553748152988616, guid: 4e73fd14d1a86d847b62baf5684b40a4, type: 3}
   - {fileID: 8574823370906218369, guid: d3aba6620650d9a43b63f304e722c01d, type: 3}
+  - {fileID: 1538314054844407505, guid: d35f7e43a4aa8814aa70278e81f23dcc, type: 3}
+  - {fileID: 3672180540838158942, guid: cdca4711e8bb47546bc4d79d991c696d, type: 3}
 --- !u!1 &109140378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,15 +2891,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  playerClass: 
+  playerClass: 0
   appearance: 
-  inventory: {fileID: 11400000, guid: 5b6101cc3a2fb2247b5c05f0eb414d64, type: 2}
-  equipment: {fileID: 11400000, guid: a1c6bc7467fd76b4db7c4b49a277bb51, type: 2}
   level: 0
+  inventory: {fileID: 11400000, guid: 5b6101cc3a2fb2247b5c05f0eb414d64, type: 2}
+  equipment: {fileID: 11400000, guid: cfb45efc66641fb47bebb07005462957, type: 2}
   health: 0
   mana: 0
   nodeObject: {fileID: 0}
   currentNode: {fileID: 0}
+  lootToAdd: []
 --- !u!1 &1371060040
 GameObject:
   m_ObjectHideFlags: 0

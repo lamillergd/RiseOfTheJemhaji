@@ -38,9 +38,9 @@ public class MainMenuButtons : MonoBehaviour
 
         File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.inventory.savePath));
         File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.equipment.savePath));
-        //Manager.instance.inventory.container.items = new InventorySlot[35];
-        Manager.instance.inventory.container.Clear();
-        Manager.instance.equipment.container.Clear();
+
+        Manager.instance.inventory.Clear();
+        Manager.instance.equipment.Clear();
     }
 
     public void LoadGame()

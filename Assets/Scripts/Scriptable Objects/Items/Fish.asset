@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebc11f3b45072f43be33cd99d6271a3, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  Id: 2
   uiDisplay: {fileID: 21300000, guid: 9d58ad8934cd52a45ae84ea9c4786833, type: 3}
+  isStackable: 1
   type: 0
-  description: Tasty fish
-  restoreHealthValue: 16
+  description: food
+  data:
+    name: 
+    id: 1
+    buffs: []

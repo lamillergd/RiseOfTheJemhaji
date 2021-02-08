@@ -14,51 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePath: /equipment.save
   database: {fileID: 11400000, guid: fb36b1a01ab793647a5c40888147d2a4, type: 2}
+  type: 1
   container:
-    items:
+    slots:
     - allowedItems: 01000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1
         buffs: []
       amount: 0
     - allowedItems: 02000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1
         buffs: []
       amount: 0
     - allowedItems: 03000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1
         buffs: []
       amount: 0
     - allowedItems: 04000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1
         buffs: []
       amount: 0
     - allowedItems: 05000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1
         buffs: []
       amount: 0
     - allowedItems: 06000000
-      parent: {fileID: 0}
-      id: -1
       item:
         name: 
         id: -1

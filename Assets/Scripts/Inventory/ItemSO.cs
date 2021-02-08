@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Food,
+    Consumable,
     Chest,
     Legs,
     Boots,
@@ -16,20 +16,23 @@ public enum ItemType
 
 public enum Attributes
 {
-    Armour,
     Damage,
-    Vitality,
-    Intellect
+    Mastery,
+    Armour,
+    Health,
+    Mana,
+    Cooldown_Rate
 }
 
 public abstract class ItemSO : ScriptableObject
 {
-    public int Id;
     public Sprite uiDisplay;
+    public bool isStackable;
     public ItemType type;
     [TextArea(15,20)]
     public string description;
-    public ItemBuff[] buffs;
+
+    public Item data = new Item();
 
     public Item CreateItem()
     {
@@ -42,8 +45,9 @@ public abstract class ItemSO : ScriptableObject
 public class Item
 {
     public string name;
-    public int id;
+    public int id = -1;
     public ItemBuff[] buffs;
+    public List<GameObject> abilities;
 
     public Item()
     {
@@ -54,21 +58,21 @@ public class Item
     public Item(ItemSO item)
     {
         name = item.name;
-        id = item.Id;
-        buffs = new ItemBuff[item.buffs.Length];
+        id = item.data.id;
+        buffs = new ItemBuff[item.data.buffs.Length];
 
         for (int i = 0; i < buffs.Length; i++)
         {
-            buffs[i] = new ItemBuff(item.buffs[i].min, item.buffs[i].max)
+            buffs[i] = new ItemBuff(item.data.buffs[i].min, item.data.buffs[i].max)
             {
-                attribute = item.buffs[i].attribute
+                attribute = item.data.buffs[i].attribute
             };
         }
     }
 }
 
 [System.Serializable]
-public class ItemBuff
+public class ItemBuff : IModifiers
 {
     public Attributes attribute;
     public int min;
@@ -85,5 +89,10 @@ public class ItemBuff
     public void GenerateValue()
     {
         value = UnityEngine.Random.Range(min, max);
+    }
+
+    public void AddValue(ref int baseValue)
+    {
+        baseValue += value;
     }
 }

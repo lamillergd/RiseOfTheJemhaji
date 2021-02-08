@@ -64,6 +64,8 @@ public class CombatManager : MonoBehaviour
         {
             StartCoroutine(CombatOver());
         }
+
+
     }
 
     public void LoadMap(string mapName)
@@ -80,8 +82,8 @@ public class CombatManager : MonoBehaviour
 
         for (int i = 0; i < totalLoot.Count; i++)
         {
-            Manager.instance.inventory.AddItem(new Item(totalLoot[i]), 1);
-            totalLoot.Remove(totalLoot[i]);
+            Manager.instance.lootToAdd.AddRange(totalLoot);
+            totalLoot = new List<ItemSO>();
         }
 
         Manager.instance.currentNode.isCompleted = true;

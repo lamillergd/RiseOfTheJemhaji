@@ -16,11 +16,16 @@ public class MapManager : MonoBehaviour
     public GameObject skillTree;
     public GameObject settingsScreen;
     public GameObject worldMap;
+    public DynamicInterface inventory;
+    public StaticInterface equipment;
 
     void Start()
     {
         SetScreens();
         SetXPBar();
+
+        inventory.InitUI();
+        equipment.InitUI();
     }
 
     void SetScreens()

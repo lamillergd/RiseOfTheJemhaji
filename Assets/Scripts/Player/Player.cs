@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    public string playerClass;
+    public PlayerClasses playerClass;
     public string playerAppearance;
     public int maxMana;
     public int currentMana;
@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         maxHealth = Manager.instance.health;
         playerClass = Manager.instance.playerClass;
         playerAppearance = Manager.instance.appearance;
+        
     }
     
     public void SavePlayer()

@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1773eaa32b5f2cf45b58aec9d4df6d5e, type: 3}
-  m_Name: M_Gloves
+  m_Name: B_Weapon
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 981f6f8bfc646864d86053d060e364d1, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 10c6846c169f3fd4c9d39bc1300e5901, type: 3}
   isStackable: 0
-  type: 4
+  type: 5
   description: 
   data:
     name: 
-    id: 7
+    id: 14
     buffs:
-    - attribute: 2
+    - attribute: 0
       min: 1
       max: 5
       value: 0
@@ -32,3 +32,7 @@ MonoBehaviour:
       min: 1
       max: 5
       value: 0
+    abilities:
+    - {fileID: 2016553748152988616, guid: 4e73fd14d1a86d847b62baf5684b40a4, type: 3}
+    - {fileID: 1538314054844407505, guid: d35f7e43a4aa8814aa70278e81f23dcc, type: 3}
+  requiredClass: 1

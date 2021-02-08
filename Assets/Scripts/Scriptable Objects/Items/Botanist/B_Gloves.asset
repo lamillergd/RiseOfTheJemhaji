@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1773eaa32b5f2cf45b58aec9d4df6d5e, type: 3}
-  m_Name: M_Gloves
+  m_Name: B_Gloves
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 981f6f8bfc646864d86053d060e364d1, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 905c185d1c6bc304ea96d609591240b7, type: 3}
   isStackable: 0
   type: 4
   description: 
   data:
     name: 
-    id: 7
+    id: 12
     buffs:
     - attribute: 2
       min: 1
@@ -32,3 +32,4 @@ MonoBehaviour:
       min: 1
       max: 5
       value: 0
+  requiredClass: 1

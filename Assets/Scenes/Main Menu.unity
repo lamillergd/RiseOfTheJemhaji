@@ -609,9 +609,22 @@ MonoBehaviour:
   namePicked: 0
   appearancePicked: 0
   playerAppearance: 
+  playerClass: 0
   classVisual: {fileID: 2075963797}
   classNameText: {fileID: 1307643572}
   playerNameText: {fileID: 1225008962}
+  myconistEquipment:
+  - {fileID: 11400000, guid: 1022ca7771aaaf24e81f6699b9bb5061, type: 2}
+  - {fileID: 11400000, guid: a681b197d0bc47347bf0109e4624a5f1, type: 2}
+  - {fileID: 11400000, guid: da0d2b8f1f37f564b8c3556fedb7bc03, type: 2}
+  - {fileID: 11400000, guid: 06a6583420db6ea479ba00014d816793, type: 2}
+  - {fileID: 11400000, guid: 8364cdd9e5eecf54c8355fe2b2bf0138, type: 2}
+  botanistEquipment:
+  - {fileID: 11400000, guid: 86acf42053506b7468f23733705cd690, type: 2}
+  - {fileID: 11400000, guid: f446fe54460b22841b74942bb21df1e1, type: 2}
+  - {fileID: 11400000, guid: 38737afee1afd8f4c8415ee42df4d1bb, type: 2}
+  - {fileID: 11400000, guid: 54719aab9dc57fe45873cfc37ba11d1d, type: 2}
+  - {fileID: 11400000, guid: 99a97196354708f49aa5bc3b1e719e93, type: 2}
   levelLoader: {fileID: 2071045229}
 --- !u!1 &548268247
 GameObject:
@@ -712,10 +725,10 @@ RectTransform:
   m_Father: {fileID: 525168570}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -419.38, y: -282.23}
-  m_SizeDelta: {x: 411.55, y: 100.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 220.62, y: 77.76999}
+  m_SizeDelta: {x: 411.55, y: 100.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566284976
 MonoBehaviour:
@@ -783,13 +796,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  playerClass: 
+  playerClass: 0
   appearance: 
   level: 0
+  inventory: {fileID: 11400000, guid: 5b6101cc3a2fb2247b5c05f0eb414d64, type: 2}
+  equipment: {fileID: 11400000, guid: cfb45efc66641fb47bebb07005462957, type: 2}
   health: 0
   mana: 0
   nodeObject: {fileID: 0}
   currentNode: {fileID: 0}
+  lootToAdd: []
 --- !u!4 &668991333
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,10 +1076,10 @@ RectTransform:
   m_Father: {fileID: 1309801927}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 563, y: 292}
-  m_SizeDelta: {x: 112.7, y: 112.3}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -77, y: -68}
+  m_SizeDelta: {x: 112.70001, y: 112.29999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837318489
 MonoBehaviour:
@@ -1188,10 +1204,10 @@ RectTransform:
   m_Father: {fileID: 525168570}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 564.9, y: -280.73}
-  m_SizeDelta: {x: 103.5, y: 103.35}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -75.099976, y: 79.26999}
+  m_SizeDelta: {x: 103.5, y: 103.350006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871331963
 MonoBehaviour:
@@ -1455,10 +1471,10 @@ RectTransform:
   m_Father: {fileID: 1610574792}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: 236}
-  m_SizeDelta: {x: 797.6, y: 197.2}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0.000011444, y: -124}
+  m_SizeDelta: {x: 797.6, y: 197.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908452577
 MonoBehaviour:
@@ -1937,10 +1953,10 @@ RectTransform:
   m_Father: {fileID: 525168570}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 387.09998, y: 270.18}
-  m_SizeDelta: {x: 459, y: 103.4}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -252.90002, y: -89.82001}
+  m_SizeDelta: {x: 459, y: 103.399994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088664927
 MonoBehaviour:
@@ -2292,9 +2308,9 @@ RectTransform:
   m_Father: {fileID: 525168570}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 387.15002, y: 51.700012}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -252.84998, y: 51.700012}
   m_SizeDelta: {x: 459, y: 103.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358843950
@@ -2370,10 +2386,10 @@ RectTransform:
   m_Father: {fileID: 1610574792}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -559, y: -283.15002}
-  m_SizeDelta: {x: 123.9, y: 123.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 81.900024, y: 80.6001}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504470065
 MonoBehaviour:
@@ -2393,7 +2409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9ba46ebe1ae5114897e63fdd7445c53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 371d97d82e6fd6f43886c7e0846ef5e5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2890,9 +2906,9 @@ RectTransform:
   m_Father: {fileID: 525168570}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 640, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1836025509
@@ -3238,6 +3254,8 @@ MonoBehaviour:
   mainMenu: {fileID: 1610574791}
   charCreation: {fileID: 525168569}
   settings: {fileID: 1309801926}
+  newGame: {fileID: 1779312286}
+  continueGame: {fileID: 1986054947}
 --- !u!1 &1986054945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3346,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Tutorial
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1915161861}
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1986054948

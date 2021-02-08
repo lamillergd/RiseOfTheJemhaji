@@ -14,6 +14,7 @@ public class CombatManager : MonoBehaviour
     public List<GameObject> activeEnemies;
     public List<Transform> enemySpawns;
     public List<Enemy> enemyStats;
+    public List<ItemSO> totalLoot;
     public bool allDead;
 
     void Start()
@@ -41,6 +42,7 @@ public class CombatManager : MonoBehaviour
         for (int i = 0; i < activeEnemies.Count; i++)
         {
             enemyStats.Add(activeEnemies[i].GetComponent<Enemy>());
+            totalLoot.AddRange(activeEnemies[i].GetComponent<Enemy>().lootTable);
         }
     }
 
@@ -62,6 +64,8 @@ public class CombatManager : MonoBehaviour
         {
             StartCoroutine(CombatOver());
         }
+
+
     }
 
     public void LoadMap(string mapName)
@@ -75,6 +79,13 @@ public class CombatManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         combatOverScreen.SetActive(true);
+
+        for (int i = 0; i < totalLoot.Count; i++)
+        {
+            Manager.instance.lootToAdd.AddRange(totalLoot);
+            totalLoot = new List<ItemSO>();
+        }
+
         Manager.instance.currentNode.isCompleted = true;
     }
 }

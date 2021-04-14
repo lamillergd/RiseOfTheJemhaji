@@ -33,6 +33,6 @@ MonoBehaviour:
       max: 5
       value: 0
     abilities:
-    - {fileID: 2016553748152988616, guid: 4e73fd14d1a86d847b62baf5684b40a4, type: 3}
-    - {fileID: 1538314054844407505, guid: d35f7e43a4aa8814aa70278e81f23dcc, type: 3}
+    - {fileID: 7254064281818717894, guid: c3af72becefa487488c03b73c455894f, type: 3}
+    - {fileID: 5104606924286985179, guid: 6e59f74f6cf7e9c4bbcb4cecadaba5e8, type: 3}
   requiredClass: 1

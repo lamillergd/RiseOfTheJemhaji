@@ -10,18 +10,20 @@ public class Manager : MonoBehaviour
     [Header("Player Info")]
     public string playerName;
     public PlayerClasses playerClass;
-    public string appearance;
+    public Sprite fullBody;
+    public Sprite headshot;
     public int level;
     public InventorySO inventory;
     public InventorySO equipment;
+    public List<GameObject> abilities;
 
     [Header("Player Stats")]
     public int health;
     public int mana;
 
     [Header("Map Info")]
-    public GameObject nodeObject;
-    public MapNode currentNode;
+    public int currentNodeID;
+    public SafezoneSO currentSafezone;
 
     public List<ItemSO> lootToAdd = new List<ItemSO>();
 
@@ -40,6 +42,8 @@ public class Manager : MonoBehaviour
         health = 100;
         mana = 100;
         level = 1;
+
+
     }
 
     void Start()
@@ -49,10 +53,19 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-        if (nodeObject != null)
+
+    }
+
+    public void CheckProgress(int _currentNodeID)
+    {
+        if (_currentNodeID < PlayerPrefs.GetInt("Node Progress"))
         {
-            currentNode = nodeObject.GetComponent<MapNode>();
-            nodeObject.SetActive(false);
+            return;
+        }
+        else
+        {
+            int newID = _currentNodeID + 1;
+            PlayerPrefs.SetInt("Node Progress", newID);
         }
     }
 
@@ -60,10 +73,6 @@ public class Manager : MonoBehaviour
     {
         inventory.Save();
         equipment.Save();
-
-        //for testing new game and continue game stuff (inv only atm)
-        //File.Delete(string.Concat(Application.persistentDataPath, inventory.savePath));
-        //File.Delete(string.Concat(Application.persistentDataPath, equipment.savePath));
 
         inventory.Clear();
         equipment.Clear();
@@ -75,6 +84,8 @@ public class Manager : MonoBehaviour
         {
             inventory.Save();
             equipment.Save();
+            //Automatically saves during ApplicationQuit
+            PlayerPrefs.Save();
         }
     }
 }

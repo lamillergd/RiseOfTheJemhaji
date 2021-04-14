@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject playerAppearance;
     public LevelLoader levelLoader;
     public GameObject combatUI;
     public GameObject combatOverScreen;
@@ -22,6 +22,7 @@ public class CombatManager : MonoBehaviour
         allDead = false;
         combatUI.SetActive(true);
         combatOverScreen.SetActive(false);
+        playerAppearance.GetComponent<SpriteRenderer>().sprite = Manager.instance.headshot;
 
         if (!isTutorial)
         {
@@ -31,8 +32,6 @@ public class CombatManager : MonoBehaviour
         {
             maxEnemies = 1;
         }
-
-        player = GameObject.Find("Player");
 
         for (int i = 0; i < maxEnemies; i++)
         {
@@ -86,6 +85,6 @@ public class CombatManager : MonoBehaviour
             totalLoot = new List<ItemSO>();
         }
 
-        Manager.instance.currentNode.isCompleted = true;
+        Manager.instance.CheckProgress(Manager.instance.currentNodeID);
     }
 }

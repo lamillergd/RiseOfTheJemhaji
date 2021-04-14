@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Combat.unity
     guid: 792bce71015018b46a13fea051c4519e
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Safezone.unity
+    guid: 0af2fe5464d930d43a129606f7989f7d
   m_configObjects: {}

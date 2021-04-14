@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour
 
     public void AttributeModified(Attribute attribute)
     {
-        //statText.SetText();
+        
     }
 
     public void OnBeforeSlotUpdate(InventorySlot _slot)
@@ -53,6 +53,7 @@ public class PlayerStats : MonoBehaviour
                         }
                     }
                 }
+
                 break;
 
             case InterfaceType.Chest:
@@ -86,6 +87,12 @@ public class PlayerStats : MonoBehaviour
                         }
                     }
                 }
+
+                if (_slot.ItemObj.type == ItemType.Weapon && Manager.instance.abilities.Count == 0)
+                {
+                    AddAbilties(_slot);
+                }
+
                 break;
 
             case InterfaceType.Chest:
@@ -94,5 +101,19 @@ public class PlayerStats : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void AddAbilties (InventorySlot _slot)
+    {
+        Manager.instance.abilities = new List<GameObject>();
+
+        if (_slot.ItemObj.type == ItemType.Weapon && Manager.instance.abilities.Count == 0)
+        {
+            for (int i = 0; i < _slot.ItemObj.data.abilities.Count; i++)
+            {
+                Manager.instance.abilities.Add(_slot.ItemObj.data.abilities[i]);
+                print(_slot.ItemObj.data.abilities[i].name.ToString() + " added");
+            }
+        }  
     }
 }

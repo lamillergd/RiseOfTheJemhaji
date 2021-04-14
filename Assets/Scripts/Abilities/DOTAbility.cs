@@ -5,7 +5,6 @@ using UnityEngine;
 public class DOTAbility : AbilityTemplate
 {
     [Header("Ability Specific")]
-    public int lvl;
     public int dmg;
     public List<GameObject> targetList;
     Enemy currentTarget;
@@ -15,8 +14,8 @@ public class DOTAbility : AbilityTemplate
 
     void Start()
     {
-        InitSO();
-        dmg = baseX * lvl;
+        Init();
+        dmg = baseX * level;
         combatManagerObj = GameObject.Find("CombatManager");
         combatManager = combatManagerObj.GetComponent<CombatManager>();
         targetList = combatManager.activeEnemies;

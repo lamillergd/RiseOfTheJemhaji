@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1455664921931400409
+--- !u!1 &2710899201600776880
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1476482206256754549}
-  - component: {fileID: 7303117384980722671}
+  - component: {fileID: 4029566845579143230}
+  - component: {fileID: 1175150614699874705}
   m_Layer: 0
-  m_Name: Lock Placeholder
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1476482206256754549
+--- !u!4 &4029566845579143230
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455664921931400409}
+  m_GameObject: {fileID: 2710899201600776880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.729, y: -0.477, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.03, y: -0.04, z: 0}
+  m_LocalScale: {x: 1.11, y: 1.11, z: 1.11}
   m_Children: []
   m_Father: {fileID: 3560720746800896511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7303117384980722671
+--- !u!212 &1175150614699874705
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455664921931400409}
+  m_GameObject: {fileID: 2710899201600776880}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -69,12 +69,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3efdbc30692bb8344924f5b9910ae9e2, type: 3}
+  m_Sprite: {fileID: -5040648250582754030, guid: 59ffeaa62e3449d4693445ee25b410a2,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.97, y: 1.97}
+  m_Size: {x: 2.128, y: 2.124}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -107,10 +108,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3560720746800896507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.79, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
-  - {fileID: 1476482206256754549}
+  - {fileID: 4029566845579143230}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7b839bf1b9e97be4fb92332df281db84, type: 3}
+  m_Sprite: {fileID: 11226280396324844, guid: 59ffeaa62e3449d4693445ee25b410a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,16 +192,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21c6069080caf243914a507bb94d8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeID: 0
   isUnlocked: 0
-  isCompleted: 0
-  unlockedImage: {fileID: 1455664921931400409}
+  unlockedImage: {fileID: 2710899201600776880}
   sceneName: None
-  nodeNumber: 0
+  safezoneData: {fileID: 0}
   nodeType: 0
   nodeImage:
-  - {fileID: 21300000, guid: 7b839bf1b9e97be4fb92332df281db84, type: 3}
-  - {fileID: 21300000, guid: 564b865e7be181b47a89f77681c87a80, type: 3}
-  - {fileID: 21300000, guid: be2d6a3e3b5363a4db142536993febd7, type: 3}
-  unlockWhenCompleted: []
-  levelLoader: {fileID: 967586276268502000, guid: 202635272b7fced4589d306900ffda14,
-    type: 3}
+  - {fileID: 11226280396324844, guid: 59ffeaa62e3449d4693445ee25b410a2, type: 3}
+  - {fileID: 8139745622354617071, guid: 59ffeaa62e3449d4693445ee25b410a2, type: 3}
+  - {fileID: -7554491863771211607, guid: 59ffeaa62e3449d4693445ee25b410a2, type: 3}
+  - {fileID: 1981824464707558045, guid: 59ffeaa62e3449d4693445ee25b410a2, type: 3}
+  nodeAfterTelepad: {fileID: 0}
+  levelLoaderObj: {fileID: 0}

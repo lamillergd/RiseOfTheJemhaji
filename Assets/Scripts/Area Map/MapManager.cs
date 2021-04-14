@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
+    public string mapName;
+    public HideNodes nodes;
+    public GameObject mainCanvas;
+    public GameObject playerImage;
     public GameObject mainUI;
     public GameObject uiScreens;
-    public GameObject menuPopup;
     public GameObject currentLevel;
     public GameObject nextLevel;
     public GameObject questsScreen;
@@ -21,6 +24,7 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
+        playerImage.GetComponent<Image>().sprite = Manager.instance.headshot;
         SetScreens();
         SetXPBar();
 
@@ -31,7 +35,6 @@ public class MapManager : MonoBehaviour
     void SetScreens()
     {
         mainUI.SetActive(true);
-        menuPopup.SetActive(false);
         uiScreens.SetActive(false);
         questsScreen.SetActive(false);
         inventoryScreen.SetActive(false);
@@ -47,24 +50,6 @@ public class MapManager : MonoBehaviour
         Text nextLvl = nextLevel.GetComponentInChildren<Text>();
         currentLvl.text = Manager.instance.level.ToString();
         nextLvl.text = (Manager.instance.level + 1).ToString();
-    }
-
-    public void PopupManager()
-    {
-        if (menuPopup.activeInHierarchy == false)
-        {
-            menuPopup.SetActive(true);
-        }
-        else
-        {
-            menuPopup.SetActive(false);
-        }
-    }
-
-    public void ShowQuests()
-    {
-        uiScreens.SetActive(true);
-        questsScreen.SetActive(true);
     }
 
     public void UIScreens(string screen)
@@ -89,34 +74,46 @@ public class MapManager : MonoBehaviour
         }
     }
 
+    public void ShowQuests()
+    {
+        uiScreens.SetActive(true);
+        questsScreen.SetActive(true);
+        nodes.DisableNodes();
+    }
+    
+
     public void ShowInventory()
     {
         uiScreens.SetActive(true);
         inventoryScreen.SetActive(true);
+        nodes.DisableNodes();
     }
 
     public void ShowCharacter()
     {
         uiScreens.SetActive(true);
         charScreen.SetActive(true);
+        nodes.DisableNodes();
     }
 
     public void ShowSettings()
     {
         uiScreens.SetActive(true);
         settingsScreen.SetActive(true);
-    }
-
-    public void SaveSettings()
-    {
-        //save settings on screen close
-        Debug.Log("Saved Settings");
+        nodes.DisableNodes();
     }
 
     public void ShowMap()
     {
         uiScreens.SetActive(true);
         worldMap.SetActive(true);
+        nodes.DisableNodes();
+    }
+
+    public void SaveSettings()
+    {
+        //save settings on screen close (PlayerPrefs)
+        Debug.Log("Saved Settings");
     }
 
     public void CloseUIScreens()
@@ -128,9 +125,17 @@ public class MapManager : MonoBehaviour
         settingsScreen.SetActive(false);
         worldMap.SetActive(false);
         uiScreens.SetActive(false);
-        if (menuPopup.activeInHierarchy == true)
-        {
-            menuPopup.SetActive(false);
-        }
+        nodes.EnableNodes();
     }
+}
+
+//might not need Tychis
+public enum Locations
+{
+    Tutorial,
+    Tychis,
+    Iulara,
+    Sestia,
+    Beterran,
+    Strichi,
 }

@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class CharacterCreation : MonoBehaviour
 {
+    public GameObject characters;
     public bool classPicked;
     public bool namePicked;
-    //will be changed to hold the sprite
     public bool appearancePicked;
-    public string playerAppearance;
+    public GameObject classSelection;
+    public GameObject nameSelection;
+    public GameObject appearanceSelection;
+    public GameObject continueButton;
     public PlayerClasses playerClass;
 
     public Image classVisual;
@@ -27,6 +30,26 @@ public class CharacterCreation : MonoBehaviour
         classPicked = false;
         namePicked = false;
         appearancePicked = false;
+        classSelection.gameObject.SetActive(true);
+        nameSelection.gameObject.SetActive(false);
+        appearanceSelection.gameObject.SetActive(false);
+        continueButton.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (classPicked)
+        {
+            nameSelection.gameObject.SetActive(true);
+        }
+        if (namePicked)
+        {
+            appearanceSelection.gameObject.SetActive(true);
+        }
+        if (appearancePicked)
+        {
+            continueButton.gameObject.SetActive(true);
+        }
     }
 
     public void ClassSelect(Sprite classImage)
@@ -71,8 +94,91 @@ public class CharacterCreation : MonoBehaviour
     public void AppearanceSelect(string appearance)
     {
         Debug.Log(appearance);
-        playerAppearance = appearance;
+        switch (playerClass)
+        {
+            case PlayerClasses.Myconist:
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            case PlayerClasses.Botanist:
+                //change once art complete
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            case PlayerClasses.Guardian:
+                //change once art complete
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            case PlayerClasses.Paladin:
+                //change once art complete
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            case PlayerClasses.Pyromancer:
+                //change once art complete
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            case PlayerClasses.Necromancer:
+                //change once art complete
+                if (appearance == "Female")
+                {
+                    SetSprites(0);
+                }
+                if (appearance == "Male")
+                {
+                    SetSprites(1);
+                }
+                break;
+
+            default:
+                break;
+        }
+
         appearancePicked = true;
+    }
+
+    void SetSprites(int index)
+    {
+        classVisual.sprite = characters.GetComponent<Characters>().fullBodies[index];
+        PlayerPrefs.SetInt("fullBody", index);
+        PlayerPrefs.SetInt("headshot", index);
     }
 
     public void ConfirmSelection()
@@ -126,7 +232,8 @@ public class CharacterCreation : MonoBehaviour
     {
         Manager.instance.playerName = playerNameText.text;
         Manager.instance.playerClass = playerClass;
-        Manager.instance.appearance = playerAppearance;
+        Manager.instance.fullBody = classVisual.sprite;
+        Manager.instance.headshot = characters.GetComponent<Characters>().headshots[PlayerPrefs.GetInt("headshot")];
     }
 }
 

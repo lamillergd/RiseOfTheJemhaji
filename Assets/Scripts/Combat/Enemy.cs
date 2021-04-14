@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
         sprite.sprite = enemy.appearance;
         damage = enemy.dmg;
         maxHealth = enemy.maxHealth;
-        enemyID = (int)enemy.enemyID;
+        enemyID = enemy.ID;
         //For when enemy special attacks are implemented
         //specialAttack = enemy.specialAttack;
 

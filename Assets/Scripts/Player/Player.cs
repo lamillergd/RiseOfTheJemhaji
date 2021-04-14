@@ -5,14 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    public PlayerClasses playerClass;
-    public string playerAppearance;
     public int maxMana;
     public int currentMana;
     public int maxHealth;
     public int currentHealth;
-    public GameObject playerImage;
-    public List<GameObject> availableAbilties;
 
     void Awake()
     {
@@ -26,18 +22,10 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    void Update()
-    {
-
-    }
-
     public void LoadPlayer()
     {
         maxMana = Manager.instance.mana;
         maxHealth = Manager.instance.health;
-        playerClass = Manager.instance.playerClass;
-        playerAppearance = Manager.instance.appearance;
-        
     }
     
     public void SavePlayer()

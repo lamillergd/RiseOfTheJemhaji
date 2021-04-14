@@ -4,31 +4,26 @@ using UnityEngine;
 
 public class AbilityTemplate : MonoBehaviour
 {
-    [Header("ScriptableObject")]
-    public AbilitySO abilitySO;
+    [Header("Base Information")]
     public string abilityName;
-    public string classType;
+    public PlayerClasses classType;
+    public int level;
     public Sprite icon;
     public int manaCost;
     public int baseX;
-    public int baseY;
-    public int baseZ;
     public int cooldown;
     public int duration;
     public int targets;
+    public Color damageColour;
     
-    public void InitSO()
+    public void Init()
     {
-        abilityName = abilitySO.name;
-        classType = abilitySO.classType.ToString();
-        icon = abilitySO.icon;
-        manaCost = abilitySO.manaCost;
-        baseX = abilitySO.x;
-        baseY = abilitySO.y;
-        baseZ = abilitySO.z;
-        cooldown = abilitySO.cooldown;
-        duration = abilitySO.duration;
-        targets = abilitySO.noOfTargets;
+        level = Manager.instance.level;
+    }
+
+    public void SetDamageColour()
+    {
+        //set damagecolour depending on classType
     }
 
     public virtual void Cast()
@@ -39,7 +34,7 @@ public class AbilityTemplate : MonoBehaviour
     public IEnumerator changeEnemyColour(Enemy target)
     {
         SpriteRenderer enemySR = target.GetComponentInChildren<SpriteRenderer>();
-        enemySR.color = Color.red;
+        enemySR.color = damageColour;
         yield return new WaitForSeconds(0.25f);
         enemySR.color = Color.white;
     }

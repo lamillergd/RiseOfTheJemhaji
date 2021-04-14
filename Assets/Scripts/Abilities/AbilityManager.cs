@@ -14,16 +14,17 @@ public class AbilityManager : MonoBehaviour
     {
         playerObj = GameObject.Find("Player");
         player = playerObj.GetComponent<Player>();
-        for (int i = 0; i < player.availableAbilties.Count; i++)
+
+        for (int i = 0; i < Manager.instance.abilities.Count; i++)
         {
-            availableAbilities.Add(Instantiate(player.availableAbilties[i], player.availableAbilties[i].transform.position, Quaternion.identity));
+            availableAbilities.Add(Instantiate(Manager.instance.abilities[i], Manager.instance.abilities[i].transform.position, Quaternion.identity));
         }
 
         for (int i = 0; i < availableAbilities.Count; i++)
         {
             AbilityTemplate ability = availableAbilities[i].GetComponent<AbilityTemplate>();
-            castButtons[i].image.sprite = ability.abilitySO.icon;
-            castButtons[i].GetComponent<CastingButton>().cooldownTime = ability.abilitySO.cooldown;
+            castButtons[i].image.sprite = ability.icon; //ability.abilitySO.icon
+            castButtons[i].GetComponent<CastingButton>().cooldownTime = ability.cooldown; //ability.abilitySO.cooldown
             castButtons[i].onClick.AddListener(() => { ability.Cast(); });
         }
     }

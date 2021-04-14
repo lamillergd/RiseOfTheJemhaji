@@ -25,7 +25,7 @@ public class MainMenuButtons : MonoBehaviour
         newGame.interactable = true;
         continueGame.interactable = false;
 
-        if (File.Exists(string.Concat(Application.persistentDataPath, Manager.instance.inventory.savePath)))
+        if (PlayerPrefs.HasKey("fullBody"))
         {
             continueGame.interactable = true;
         }
@@ -38,6 +38,9 @@ public class MainMenuButtons : MonoBehaviour
 
         File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.inventory.savePath));
         File.Delete(string.Concat(Application.persistentDataPath, Manager.instance.equipment.savePath));
+        PlayerPrefs.DeleteKey("fullBody");
+        PlayerPrefs.DeleteKey("headshot");
+        PlayerPrefs.DeleteKey("Node Progress");
 
         Manager.instance.inventory.Clear();
         Manager.instance.equipment.Clear();

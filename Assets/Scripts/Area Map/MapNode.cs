@@ -1,32 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MapNode : MonoBehaviour
 {
     public enum NodeType
     {
-        None,
         Combat,
         Safe,
-        Portal
+        Portal,
+        Telepad
     }
 
-    public enum Map
-    {
-        Tutorial,
-        Iulara,
-        Tychis
-    }
-    
+    public int nodeID;
     public bool isUnlocked;
-    public bool isCompleted;
     public GameObject unlockedImage;
     public string sceneName;
+    public SafezoneSO safezoneData;
     public NodeType nodeType;
     public List<Sprite> nodeImage = new List<Sprite>();
-    public List<MapNode> unlockWhenCompleted = new List<MapNode>();
+    public MapNode nodeAfterTelepad;
     SpriteRenderer sr;
 
     [Header("Level/Scene Loading")]
@@ -37,54 +30,38 @@ public class MapNode : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         levelLoader = levelLoaderObj.GetComponent<LevelLoader>();
-        switch ((int)nodeType)
+        switch (nodeType)
         {
-            case 0:
-                sr.sprite = null;
-                Debug.Log("No type selected");
-                break;
-            //Combat Node
-            case 1:
+            case NodeType.Combat:
                 sr.sprite = nodeImage[0];
                 break;
-            //Safe Node
-            case 2:
+
+            case NodeType.Safe:
                 sr.sprite = nodeImage[1];
                 break;
-            //Portal Node
-            case 3:
+
+            case NodeType.Portal:
                 sr.sprite = nodeImage[2];
                 break;
-            //Need To Add A Telepad Node
+
+            case NodeType.Telepad:
+                sr.sprite = nodeImage[3];
+                break;
+
             default:
                 sr.sprite = null;
                 Debug.Log("No type selected");
                 break;
         }
 
-        if (Manager.instance.nodeObject != null)
-        {
-            if (Manager.instance.nodeObject.name == this.gameObject.name)
-            {
-                isCompleted = Manager.instance.currentNode.isCompleted;
-                Destroy(Manager.instance.nodeObject.gameObject);
-                Manager.instance.nodeObject = null;
-                Manager.instance.currentNode = null;
-            }
-        }
+        UpdateNode();
     }
 
-    void Update()
+    void UpdateNode()
     {
-        if (isCompleted == true)
+        if (nodeID <= PlayerPrefs.GetInt("Node Progress"))
         {
-            if (unlockWhenCompleted != null)
-            {
-                for (int i = 0; i < unlockWhenCompleted.Count; i++)
-                {
-                    unlockWhenCompleted[i].isUnlocked = true;
-                }
-            }
+            isUnlocked = true;
         }
 
         if (isUnlocked == true)
@@ -95,28 +72,59 @@ public class MapNode : MonoBehaviour
         {
             unlockedImage.SetActive(true);
         }
+    }
 
+    void UnlockAfterTelepad()
+    {
+        nodeAfterTelepad.UpdateNode();
+    }
+
+    void LoadScene()
+    {
+        if (sceneName == "None")
+        {
+            Debug.Log("No scene to load!");
+        }
+        else
+        {
+            levelLoader.LoadLevel(sceneName);
+        }
     }
 
     void OnMouseDown()
     {
-        if (sceneName == "None")
+        if (isUnlocked)
         {
-            Debug.Log("no scene selected");
+            switch (nodeType)
+            {
+                case NodeType.Combat:
+                    Manager.instance.currentNodeID = nodeID;
+                    LoadScene();
+                    break;
+
+                case NodeType.Safe:
+                    Manager.instance.currentSafezone = this.safezoneData;
+                    Manager.instance.CheckProgress(nodeID);
+                    LoadScene();
+                    break;
+
+                case NodeType.Portal:
+                    Debug.Log("Travelling to next map");
+                    break;
+
+                case NodeType.Telepad:
+                    Debug.Log("You have discovered a place");
+                    Manager.instance.CheckProgress(nodeID);
+                    UnlockAfterTelepad();
+                    break;
+
+                default:
+                    break;
+            }
         }
         else
         {
-            if (isUnlocked)
-            {
-                Manager.instance.nodeObject = this.gameObject;
-                DontDestroyOnLoad(Manager.instance.nodeObject);
-                levelLoader.LoadLevel(sceneName);
-            }
-            else
-            {
-                Debug.Log("Not unlocked");
-            }
+            Debug.Log("Not unlocked");
         }
-        
     }
 }

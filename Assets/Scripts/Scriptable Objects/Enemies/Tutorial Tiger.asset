@@ -9,16 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5206de8e22c1d4e9a752b2fa35bb56, type: 3}
-  m_Name: AOEDOT Test
+  m_Script: {fileID: 11500000, guid: 7a6647fb4c2c4d24fbc1b4297db5adb4, type: 3}
+  m_Name: Tutorial Tiger
   m_EditorClassIdentifier: 
-  name: AOEDOT Test
-  classType: 0
-  icon: {fileID: 21300000, guid: 3dd9f0162fbce9e478d73558734978e2, type: 3}
-  manaCost: 5
-  x: 10
-  y: 0
-  z: 0
-  cooldown: 5
-  duration: 5
-  noOfTargets: 3
+  name: Tutorial Tiger
+  ID: 0
+  appearance: {fileID: 21300000, guid: 75848e6bd4dcda842b75c0b313ae8aab, type: 3}
+  dmg: 5
+  maxHealth: 30

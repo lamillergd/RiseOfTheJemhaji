@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7898570061592210437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8303540837252048122}
+  - component: {fileID: 4115534751606742831}
+  m_Layer: 0
+  m_Name: Myconist Single
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8303540837252048122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898570061592210437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4115534751606742831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898570061592210437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16aacedc91c3c84da03146d821c3b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityName: Myconist Single
+  classType: 0
+  type: 0
+  level: 0
+  icon: {fileID: 21300000, guid: 2fe50dc8f7ac5b54091222f0fc44eb7a, type: 3}
+  manaCost: 5
+  baseX: 10
+  baseY: 0
+  baseZ: 0
+  cooldown: 5
+  duration_DOTOnly: 0
+  targets: 1
+  damageColour: {r: 0, g: 0, b: 0, a: 1}
+  dmg: 0
+  targetList: []
+  combatManagerObj: {fileID: 0}
+  effect: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}

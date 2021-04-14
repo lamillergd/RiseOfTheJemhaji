@@ -6,23 +6,21 @@ public class HideNodes : MonoBehaviour
 {
     public List<GameObject> mapNodes = new List<GameObject>();
     public GameObject uiScreens;
+    public GameObject safeZone;
 
-    void Update()
+    public void DisableNodes()
     {
-        if (uiScreens.activeInHierarchy == true)
+        foreach (GameObject n in mapNodes)
         {
-            foreach (GameObject n in mapNodes)
-            {
-                n.GetComponent<CircleCollider2D>().enabled = false;
-            }
+            n.GetComponent<CircleCollider2D>().enabled = false;
         }
+    }
 
-        if (uiScreens.activeInHierarchy == false)
+    public void EnableNodes()
+    {
+        foreach (GameObject n in mapNodes)
         {
-            foreach (GameObject n in mapNodes)
-            {
-                n.GetComponent<CircleCollider2D>().enabled = true;
-            }
+            n.GetComponent<CircleCollider2D>().enabled = true;
         }
     }
 }

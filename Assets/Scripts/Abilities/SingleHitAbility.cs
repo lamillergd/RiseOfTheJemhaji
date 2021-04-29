@@ -10,7 +10,6 @@ public class SingleHitAbility : AbilityTemplate
     Enemy currentTarget;
     public GameObject combatManagerObj;
     CombatManager combatManager;
-    public GameObject effect;
 
     void Start()
     {
@@ -55,7 +54,6 @@ public class SingleHitAbility : AbilityTemplate
     {
         currentTarget.currentHealth -= dmg;
         StartCoroutine(changeEnemyColour(currentTarget));
-        Instantiate(effect, currentTarget.transform.position, Quaternion.identity);
 
         if (currentTarget.currentHealth <= 0)
         {

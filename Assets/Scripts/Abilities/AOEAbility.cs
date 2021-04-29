@@ -10,7 +10,6 @@ public class AOEAbility : AbilityTemplate
     Enemy currentTarget;
     public GameObject combatManagerObj;
     CombatManager combatManager;
-    public GameObject effect;
 
     void Start()
     {
@@ -59,7 +58,6 @@ public class AOEAbility : AbilityTemplate
 
             target.currentHealth -= dmg;
             StartCoroutine(changeEnemyColour(target));
-            Instantiate(effect, target.transform.position, Quaternion.identity);
 
             if (target.currentHealth <= 0)
             {

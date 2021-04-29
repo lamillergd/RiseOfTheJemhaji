@@ -19,11 +19,35 @@ public class AbilityTemplate : MonoBehaviour
     public void Init()
     {
         level = Manager.instance.level;
+        SetDamageColour();
     }
 
     public void SetDamageColour()
     {
-        //set damagecolour depending on classType
+        switch (classType)
+        {
+            case PlayerClasses.Myconist:
+                damageColour = new Color32(136,18,255,255);
+                break;
+            case PlayerClasses.Botanist:
+                damageColour = new Color32(42,178,39,255);
+                break;
+            case PlayerClasses.Guardian:
+                damageColour = new Color32(84,81,178,255);
+                break;
+            case PlayerClasses.Paladin:
+                damageColour = new Color32(219,190,67,255);
+                break;
+            case PlayerClasses.Pyromancer:
+                damageColour = new Color32(209,93,58,255);
+                break;
+            case PlayerClasses.Necromancer:
+                damageColour = new Color32(87,87,87,255);
+                break;
+            default:
+                damageColour = Color.black;
+                break;
+        }
     }
 
     public virtual void Cast()

@@ -10,7 +10,6 @@ public class AOEDOTAbility : AbilityTemplate
     Enemy currentTarget;
     public GameObject combatManagerObj;
     CombatManager combatManager;
-    public GameObject effect;
 
     void Start()
     {
@@ -67,7 +66,6 @@ public class AOEDOTAbility : AbilityTemplate
                 target.currentHealth -= DOTDamage;
 
                 StartCoroutine(changeEnemyColour(target));
-                Instantiate(effect, target.transform.position, Quaternion.identity);
                 target.SetSlider(currentTarget.currentHealth);
                 countdown++;
             }

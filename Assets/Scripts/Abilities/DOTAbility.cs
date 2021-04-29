@@ -10,7 +10,6 @@ public class DOTAbility : AbilityTemplate
     Enemy currentTarget;
     public GameObject combatManagerObj;
     CombatManager combatManager;
-    public GameObject effect;
 
     void Start()
     {
@@ -61,7 +60,6 @@ public class DOTAbility : AbilityTemplate
             currentTarget.currentHealth -= DOTDamage;
             currentTarget.SetSlider(currentTarget.currentHealth);
             StartCoroutine(changeEnemyColour(currentTarget));
-            Instantiate(effect, currentTarget.transform.position, Quaternion.identity);
             countdown++;
         }
 

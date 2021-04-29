@@ -18,6 +18,7 @@ public class MapNode : MonoBehaviour
     public string sceneName;
     public SafezoneSO safezoneData;
     public NodeType nodeType;
+    public int combatLevel;
     public List<Sprite> nodeImage = new List<Sprite>();
     public MapNode nodeAfterTelepad;
     SpriteRenderer sr;
@@ -99,6 +100,7 @@ public class MapNode : MonoBehaviour
             {
                 case NodeType.Combat:
                     Manager.instance.currentNodeID = nodeID;
+                    Manager.instance.combatLevel = combatLevel;
                     LoadScene();
                     break;
 

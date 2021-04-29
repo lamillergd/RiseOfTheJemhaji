@@ -13,6 +13,7 @@ public class Manager : MonoBehaviour
     public Sprite fullBody;
     public Sprite headshot;
     public int level;
+    public int currentXP;
     public InventorySO inventory;
     public InventorySO equipment;
     public List<GameObject> abilities;
@@ -24,6 +25,7 @@ public class Manager : MonoBehaviour
     [Header("Map Info")]
     public int currentNodeID;
     public SafezoneSO currentSafezone;
+    public int combatLevel;
 
     public List<ItemSO> lootToAdd = new List<ItemSO>();
 
@@ -42,18 +44,6 @@ public class Manager : MonoBehaviour
         health = 100;
         mana = 100;
         level = 1;
-
-
-    }
-
-    void Start()
-    {
-  
-    }
-
-    void Update()
-    {
-
     }
 
     public void CheckProgress(int _currentNodeID)

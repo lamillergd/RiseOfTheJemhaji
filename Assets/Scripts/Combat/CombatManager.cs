@@ -5,9 +5,11 @@ using UnityEngine;
 public class CombatManager : MonoBehaviour
 {
     public GameObject playerAppearance;
+    public GameObject playerObject;
     public LevelLoader levelLoader;
     public GameObject combatUI;
     public GameObject combatOverScreen;
+    public int combatLevel;
     public bool isTutorial;
     public int maxEnemies;
     public List<GameObject> enemiesToChooseFrom;
@@ -15,6 +17,7 @@ public class CombatManager : MonoBehaviour
     public List<Transform> enemySpawns;
     public List<Enemy> enemyStats;
     public List<ItemSO> totalLoot;
+    public int totalXP;
     public bool allDead;
 
     void Start()
@@ -23,6 +26,7 @@ public class CombatManager : MonoBehaviour
         combatUI.SetActive(true);
         combatOverScreen.SetActive(false);
         playerAppearance.GetComponent<SpriteRenderer>().sprite = Manager.instance.headshot;
+        combatLevel = Manager.instance.combatLevel;
 
         if (!isTutorial)
         {
@@ -42,6 +46,8 @@ public class CombatManager : MonoBehaviour
         {
             enemyStats.Add(activeEnemies[i].GetComponent<Enemy>());
             totalLoot.AddRange(activeEnemies[i].GetComponent<Enemy>().lootTable);
+            activeEnemies[i].GetComponent<Enemy>().level = combatLevel;
+            totalXP += activeEnemies[i].GetComponent<Enemy>().xp * combatLevel;
         }
     }
 
@@ -64,7 +70,10 @@ public class CombatManager : MonoBehaviour
             StartCoroutine(CombatOver());
         }
 
-
+        if (playerObject.activeInHierarchy == false)
+        {
+            StartCoroutine(PlayerDied());
+        }
     }
 
     public void LoadMap(string mapName)
@@ -83,8 +92,15 @@ public class CombatManager : MonoBehaviour
         {
             Manager.instance.lootToAdd.AddRange(totalLoot);
             totalLoot = new List<ItemSO>();
+            Manager.instance.currentXP += totalXP;
         }
 
         Manager.instance.CheckProgress(Manager.instance.currentNodeID);
+    }
+
+    IEnumerator PlayerDied()
+    {
+        yield return new WaitForSeconds(0.25f);
+        combatOverScreen.SetActive(true);
     }
 }

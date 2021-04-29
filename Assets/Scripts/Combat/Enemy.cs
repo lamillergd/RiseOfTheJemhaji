@@ -5,36 +5,25 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("ScriptableObject")]
-    public EnemySO enemy;
-    public int enemyID;
-    public SpriteRenderer sprite;
-    public int damage;
-    public int maxHealth;
-    //For when enemy special attacks are implemented
-    //public GameObject specialAttack;
-
-    [Header("Loot Table")]
+    [Header("Gains")]
+    public int xp;
     public List<ItemSO> lootTable = new List<ItemSO>();
 
     [Header("General")]
+    public int level;
+    public int damage;
+    public int scaledDamage;
+    public int maxHealth;
     public int currentHealth;
     public Slider healthSlider;
     public GameObject playerObj;
-    public GameObject damageEffect;
 
     float attackTimer;
     float cooldown;
 
     void Start()
     {
-        sprite.sprite = enemy.appearance;
-        damage = enemy.dmg;
-        maxHealth = enemy.maxHealth;
-        enemyID = enemy.ID;
-        //For when enemy special attacks are implemented
-        //specialAttack = enemy.specialAttack;
-
+        scaledDamage = damage * level;
         currentHealth = maxHealth;
         SetSliderMax(maxHealth);
         attackTimer = 3f;
@@ -85,9 +74,8 @@ public class Enemy : MonoBehaviour
 
     public void DealDamage()
     {
-        Player.instance.currentHealth -= damage;
+        Player.instance.currentHealth -= scaledDamage;
         StartCoroutine(changeColour());
-        Instantiate(damageEffect, playerObj.transform.position, Quaternion.identity);
 
         if (Player.instance.currentHealth <= 0)
         {

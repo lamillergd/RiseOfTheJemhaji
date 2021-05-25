@@ -15,6 +15,7 @@ public class AbilityTemplate : MonoBehaviour
     public int duration;
     public int targets;
     public Color damageColour;
+    public string damageSoundName;
     
     public void Init()
     {

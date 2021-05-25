@@ -254,6 +254,8 @@ public class Board : MonoBehaviour
 
     public void FlipPieces(Point p1, Point p2, bool main)
     {
+        AudioManager.instance.Play("GemSwipe");
+
         if (GetValueAtPoint(p1) < 0)
         {
             return;
@@ -381,46 +383,6 @@ public class Board : MonoBehaviour
             ScoreSystem.instance.AddMana(same, 3, main);
             ScoreSystem.instance.AddMana(same, 4, main);
         }
-
-        //2x2
-        //for (int i = 0; i < 4; i++)
-        //{
-        //    List<Point> square = new List<Point>();
-        //    int same = 0;
-        //    int next = i + 1;
-        //    if (next >= 4)
-        //    {
-        //        next -= 4;
-        //    }
-
-        //    Point[] check = 
-        //    {
-        //        Point.Add(p, directions[i]), 
-        //        Point.Add(p, directions[next]),
-        //        Point.Add(p, Point.Add(directions[i], directions[next]))
-        //    };
-
-        //    foreach (Point nextPoint in check)
-        //    {
-        //        if (GetValueAtPoint(nextPoint) == val)
-        //        {
-        //            square.Add(nextPoint);
-        //            same++;
-        //        }
-        //    }
-
-        //    if (same > 2)
-        //    {
-        //        AddPoints(ref connected, square);
-        //    }
-
-        //    //match square
-        //    if (same == 3 && main)
-        //    {
-        //        score++;
-        //        Debug.Log("Match square: " + score);
-        //    }
-        //}
 
         if(main)
         {

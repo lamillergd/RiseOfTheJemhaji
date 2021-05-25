@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
     public Slider healthSlider;
     public GameObject playerObj;
+    public string soundToPlay;
 
     float attackTimer;
     float cooldown;
@@ -76,6 +77,14 @@ public class Enemy : MonoBehaviour
     {
         Player.instance.currentHealth -= scaledDamage;
         StartCoroutine(changeColour());
+        if (Manager.instance.isFemale == true)
+        {
+            AudioManager.instance.Play("DamageFemale");
+        }
+        else
+        {
+            AudioManager.instance.Play("DamageMale");
+        }
 
         if (Player.instance.currentHealth <= 0)
         {

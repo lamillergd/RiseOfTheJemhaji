@@ -25,6 +25,7 @@ public class AOEAbility : AbilityTemplate
         if (Player.instance.currentMana >= manaCost && currentTarget.gameObject.activeInHierarchy == true)
         {
             DealDamageAOE();
+            AudioManager.instance.Play(damageSoundName);
             Player.instance.currentMana -= manaCost;
         }
 
@@ -61,6 +62,7 @@ public class AOEAbility : AbilityTemplate
 
             if (target.currentHealth <= 0)
             {
+                AudioManager.instance.Play(target.soundToPlay);
                 target.gameObject.SetActive(false);
             }
 

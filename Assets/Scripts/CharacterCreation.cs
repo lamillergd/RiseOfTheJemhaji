@@ -56,6 +56,8 @@ public class CharacterCreation : MonoBehaviour
     {
         classVisual.sprite = classImage;
         classPicked = true;
+
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     public void ClassName(string className)
@@ -171,7 +173,18 @@ public class CharacterCreation : MonoBehaviour
                 break;
         }
 
+        if (appearance == "Female")
+        {
+            Manager.instance.isFemale = true;
+        }
+        else
+        {
+            Manager.instance.isFemale = false;
+        }
+
         appearancePicked = true;
+
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     void SetSprites(int index)
@@ -194,6 +207,8 @@ public class CharacterCreation : MonoBehaviour
         {
             Debug.Log("Creation not complete");
         }
+
+        AudioManager.instance.Play("NewGameButton");
     }
 
     void SetEquipment()

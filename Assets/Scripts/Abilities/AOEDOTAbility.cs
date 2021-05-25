@@ -37,6 +37,7 @@ public class AOEDOTAbility : AbilityTemplate
         if (Player.instance.currentMana >= manaCost && currentTarget.gameObject.activeInHierarchy == true)
         {
             StartCoroutine(DealDamageAOEDOT());
+            AudioManager.instance.Play(damageSoundName);
             Player.instance.currentMana -= manaCost;
         }
 
@@ -72,6 +73,7 @@ public class AOEDOTAbility : AbilityTemplate
 
             if (target.currentHealth <= 0)
             {
+                AudioManager.instance.Play(target.soundToPlay);
                 target.gameObject.SetActive(false);
             }
         }

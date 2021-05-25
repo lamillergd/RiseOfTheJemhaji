@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ebc11f3b45072f43be33cd99d6271a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 51c199ace45dbf247ae1263ac2294c20, type: 3}
   m_Name: Fish
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: 9d58ad8934cd52a45ae84ea9c4786833, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 950fd9c055d912241ad6a82f7cb9a565, type: 3}
   isStackable: 1
-  type: 0
-  description: food
+  type: 7
+  description: A fish that will be very tasty once cooked.
   data:
     name: 
     id: 1
     buffs: []
+    abilities: []

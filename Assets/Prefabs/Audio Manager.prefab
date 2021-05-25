@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2402815081389607583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2402815081389607581}
+  - component: {fileID: 2402815081389607582}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2402815081389607581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402815081389607583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2402815081389607582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2402815081389607583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5252c1d047b17604d9d3c7d03d23bb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundName: GeneralButtonClick
+    clip: {fileID: 8300000, guid: a8f1234b84b80354f817372e22c7f6b0, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: NewGameButton
+    clip: {fileID: 8300000, guid: f97b5c03e9931614f8012d0231ceba48, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: SalangnuA
+    clip: {fileID: 8300000, guid: dfd86b1b53a2b2e43bd492bc6716ce6a, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 1
+  - soundName: SafeNode
+    clip: {fileID: 8300000, guid: df2025c18f588914c94a40db7236d103, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: CombatNode
+    clip: {fileID: 8300000, guid: d45a387fdd7803a4c9d2e79ae2893704, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: TelepadNode
+    clip: {fileID: 8300000, guid: 2d7d7ec87bf9857499500d91990151ee, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: PortalNode
+    clip: {fileID: 8300000, guid: e373b11acc43f2d4fa10c14167199fdd, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: GemSwipe
+    clip: {fileID: 8300000, guid: 00902466338140341af3920bfcec3641, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: DamageFemale
+    clip: {fileID: 8300000, guid: 60087933d382d2a4892cab65259848f7, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: DamageMale
+    clip: {fileID: 8300000, guid: b717afa0fedfa9b46bb2cc47e17bb61e, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: TigerDamage
+    clip: {fileID: 8300000, guid: ecc2604a3860c4a46a5d32842718a638, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: Myconist1
+    clip: {fileID: 8300000, guid: dfdae75879ff0cb4bbfa8e6eea38bf3d, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: Myconist2
+    clip: {fileID: 8300000, guid: 220d513752d0a764a9bc3e043603259a, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: Myconist3
+    clip: {fileID: 8300000, guid: 654adb381d3f5a048a0a3b92ee5f60cf, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: SalangnuB
+    clip: {fileID: 8300000, guid: 8277bbed3fc699041a2a86803d5edd45, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 1
+  - soundName: SalangnuC
+    clip: {fileID: 8300000, guid: c6a087a04bf912e44a21ff15cd1ad707, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 1
+  - soundName: SalangnuSwamp
+    clip: {fileID: 8300000, guid: be76fdf24a2148f429f2151e590cbb77, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 1
+  - soundName: CombatVictory
+    clip: {fileID: 8300000, guid: 7db355ba91315a94b99bed6a03879431, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0
+  - soundName: CombatDefeat
+    clip: {fileID: 8300000, guid: 99ef217fa7bfe7144895199d51268588, type: 3}
+    source: {fileID: 0}
+    volume: 1
+    loop: 0

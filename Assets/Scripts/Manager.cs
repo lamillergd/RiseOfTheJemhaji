@@ -12,15 +12,19 @@ public class Manager : MonoBehaviour
     public PlayerClasses playerClass;
     public Sprite fullBody;
     public Sprite headshot;
-    public int level;
-    public int currentXP;
+    public bool isFemale;
+    public int neededXP;
     public InventorySO inventory;
     public InventorySO equipment;
     public List<GameObject> abilities;
 
     [Header("Player Stats")]
+    public bool tutorialComplete;
+    public bool combatTutComplete;
     public int health;
     public int mana;
+    public int level;
+    public int currentXP;
 
     [Header("Map Info")]
     public int currentNodeID;
@@ -44,6 +48,7 @@ public class Manager : MonoBehaviour
         health = 100;
         mana = 100;
         level = 1;
+        neededXP = 100;
     }
 
     public void CheckProgress(int _currentNodeID)

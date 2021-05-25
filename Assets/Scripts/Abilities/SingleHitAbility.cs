@@ -36,6 +36,7 @@ public class SingleHitAbility : AbilityTemplate
         if (Player.instance.currentMana >= manaCost && currentTarget.gameObject.activeInHierarchy == true)
         {
             DealDamageSingle();
+            AudioManager.instance.Play(damageSoundName);
             Player.instance.currentMana -= manaCost;
         }
 
@@ -57,6 +58,7 @@ public class SingleHitAbility : AbilityTemplate
 
         if (currentTarget.currentHealth <= 0)
         {
+            AudioManager.instance.Play(currentTarget.soundToPlay);
             currentTarget.gameObject.SetActive(false);
         }
 

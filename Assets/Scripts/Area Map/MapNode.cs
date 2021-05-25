@@ -101,22 +101,26 @@ public class MapNode : MonoBehaviour
                 case NodeType.Combat:
                     Manager.instance.currentNodeID = nodeID;
                     Manager.instance.combatLevel = combatLevel;
+                    AudioManager.instance.Play("CombatNode");
                     LoadScene();
                     break;
 
                 case NodeType.Safe:
                     Manager.instance.currentSafezone = this.safezoneData;
                     Manager.instance.CheckProgress(nodeID);
+                    AudioManager.instance.Play("SafeNode");
                     LoadScene();
                     break;
 
                 case NodeType.Portal:
                     Debug.Log("Travelling to next map");
+                    AudioManager.instance.Play("PortalNode");
                     break;
 
                 case NodeType.Telepad:
                     Debug.Log("You have discovered a place");
                     Manager.instance.CheckProgress(nodeID);
+                    AudioManager.instance.Play("TelepadNode");
                     UnlockAfterTelepad();
                     break;
 

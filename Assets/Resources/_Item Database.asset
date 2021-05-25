@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: _Item Database
   m_EditorClassIdentifier: 
   itemObjs:
-  - {fileID: 11400000, guid: b672416574177b5419164dd03739aed8, type: 2}
-  - {fileID: 11400000, guid: 8cab2c1ec1da9b64e9bc04403f46a752, type: 2}
-  - {fileID: 11400000, guid: 97af1d8a8b86af34c98567facb3ddc80, type: 2}
-  - {fileID: 11400000, guid: eadeea79c9d21ee4493fa2234f8bb82a, type: 2}
-  - {fileID: 11400000, guid: bce518156d3e4c44a80f68821da8d6ec, type: 2}
+  - {fileID: 11400000, guid: 8e881162e4ffb1148b3170368675e5b7, type: 2}
+  - {fileID: 11400000, guid: 8f2653eb2fd79274d83caa2e5e7484a9, type: 2}
+  - {fileID: 11400000, guid: 702cbbda88e7b53468968e30d0bd5de8, type: 2}
+  - {fileID: 11400000, guid: e9770d62095bace4bb843b33d5351323, type: 2}
+  - {fileID: 11400000, guid: ee41a6ea7ee71aa4993d604fbb275cee, type: 2}
   - {fileID: 11400000, guid: da0d2b8f1f37f564b8c3556fedb7bc03, type: 2}
   - {fileID: 11400000, guid: 1022ca7771aaaf24e81f6699b9bb5061, type: 2}
   - {fileID: 11400000, guid: 06a6583420db6ea479ba00014d816793, type: 2}
@@ -28,3 +28,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54719aab9dc57fe45873cfc37ba11d1d, type: 2}
   - {fileID: 11400000, guid: f446fe54460b22841b74942bb21df1e1, type: 2}
   - {fileID: 11400000, guid: 99a97196354708f49aa5bc3b1e719e93, type: 2}
+  - {fileID: 11400000, guid: e0fd505ad19b29c439046cab38e135d2, type: 2}
+  - {fileID: 11400000, guid: ff748c126ba807643bf37a38c6aeea55, type: 2}

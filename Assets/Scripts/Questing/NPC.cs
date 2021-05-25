@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour
 {
     public Button startDialogue;
     public string npcName;
+    [TextArea(5,5)]
     public string[] dialogue;
 
     void Start()

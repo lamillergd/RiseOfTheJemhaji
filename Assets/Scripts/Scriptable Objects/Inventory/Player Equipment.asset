@@ -22,34 +22,40 @@ MonoBehaviour:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0
     - allowedItems: 02000000
       item:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0
     - allowedItems: 03000000
       item:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0
     - allowedItems: 04000000
       item:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0
     - allowedItems: 05000000
       item:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0
     - allowedItems: 06000000
       item:
         name: 
         id: -1
         buffs: []
+        abilities: []
       amount: 0

@@ -23,15 +23,17 @@ public class AbilityManager : MonoBehaviour
         for (int i = 0; i < availableAbilities.Count; i++)
         {
             AbilityTemplate ability = availableAbilities[i].GetComponent<AbilityTemplate>();
-            castButtons[i].image.sprite = ability.icon; //ability.abilitySO.icon
-            castButtons[i].GetComponent<CastingButton>().cooldownTime = ability.cooldown; //ability.abilitySO.cooldown
+            castButtons[i].image.sprite = ability.icon;
+            castButtons[i].GetComponent<CastingButton>().cooldownTime = ability.cooldown;
             castButtons[i].onClick.AddListener(() => { ability.Cast(); });
         }
-    }
 
-    
-    void Update()
-    {
-        
+        foreach (Button button in castButtons)
+        {
+            if (button.GetComponent<Image>().sprite == null)
+            {
+                button.gameObject.SetActive(false);
+            }
+        }
     }
 }

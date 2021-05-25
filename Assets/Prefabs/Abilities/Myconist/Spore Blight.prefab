@@ -53,7 +53,7 @@ MonoBehaviour:
   duration: 5
   targets: 1
   damageColour: {r: 0, g: 0, b: 0, a: 1}
+  damageSoundName: Myconist1
   dmg: 0
   targetList: []
   combatManagerObj: {fileID: 0}
-  effect: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}

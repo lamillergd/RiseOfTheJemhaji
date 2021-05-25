@@ -66,5 +66,6 @@ public class DialogueManager : MonoBehaviour
         {
             safezone.EnableScreens();
         }
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 }

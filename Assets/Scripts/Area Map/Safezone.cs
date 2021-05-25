@@ -44,6 +44,7 @@ public class Safezone : MonoBehaviour
         menu.SetActive(false);
         closeButton.SetActive(false);
         dialogueScreen.SetActive(true);
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     public void EnableGathering()
@@ -78,6 +79,7 @@ public class Safezone : MonoBehaviour
     public void GoBack()
     {
         levelLoader.LoadLevel(sceneToLoad);
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     void Update()

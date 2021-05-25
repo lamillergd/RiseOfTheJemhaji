@@ -11,12 +11,14 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject settings;
     public Button newGame;
     public Button continueGame;
+    public Slider volumeSlider;
 
     void Start()
     {
         mainMenu.SetActive(true);
         charCreation.SetActive(false);
         settings.SetActive(false);
+        volumeSlider.value = AudioManager.instance.volume;
         SetButtons();
     }
 
@@ -44,18 +46,24 @@ public class MainMenuButtons : MonoBehaviour
 
         Manager.instance.inventory.Clear();
         Manager.instance.equipment.Clear();
+
+        AudioManager.instance.Play("NewGameButton");
     }
 
     public void LoadGame()
     {
         Manager.instance.inventory.Load();
         Manager.instance.equipment.Load();
+
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     public void ShowSettings()
     {
         mainMenu.SetActive(false);
         settings.SetActive(true);
+
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 
     public void CloseAndSaveSettings()
@@ -64,5 +72,7 @@ public class MainMenuButtons : MonoBehaviour
         Debug.Log("Saved settings");
         mainMenu.SetActive(true);
         settings.SetActive(false);
+
+        AudioManager.instance.Play("GeneralButtonClick");
     }
 }

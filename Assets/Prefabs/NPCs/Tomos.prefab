@@ -349,10 +349,10 @@ MonoBehaviour:
   - You look awful. We need to hurry to get you fixed up.
   - Why are you looking at me like that? Do you not remember what happened?
   - "Judging by that look on your face, I\u2019m going to guess you don\u2019t remember
-    anything"
+    anything."
   - Darn, I need to figure out how much longer we have left to go...and there seems
-    to be some trouble up ahead
-  - "Can you go deal with that? I\u2019ll meet you further along the path"
+    to be some trouble up ahead.
+  - "Can you go deal with that? I\u2019ll meet you further along the path."
 --- !u!1 &8183374705466511592
 GameObject:
   m_ObjectHideFlags: 0

@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 3995897880239418699}
   - component: {fileID: 3995897880239418708}
   m_Layer: 0
-  m_Name: Tutorial Tiger
+  m_Name: Tiger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,9 +305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xp: 10
-  scaledXP: 0
   lootTable:
-  - {fileID: 11400000, guid: b672416574177b5419164dd03739aed8, type: 2}
+  - {fileID: 11400000, guid: 8e881162e4ffb1148b3170368675e5b7, type: 2}
   level: 0
   damage: 5
   scaledDamage: 0
@@ -315,6 +314,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 3995897878451042095}
   playerObj: {fileID: 0}
+  soundToPlay: TigerDamage
 --- !u!212 &3995897880239418708
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -14,13 +14,10 @@ public abstract class UserInterface : MonoBehaviour
 
     void Start()
     {
-        //InitUI();
-
         AddEvent(gameObject, EventTriggerType.PointerEnter, delegate { OnEnterInterface(gameObject); });
         AddEvent(gameObject, EventTriggerType.PointerExit, delegate { OnExitInterface(gameObject); });
     }
 
-    //Called on MapManager as it needs to be called on a script which is always active in the same scene as the inventories
     public void InitUI()
     {
         for (int i = 0; i < inventory.GetSlots.Length; i++)
@@ -59,11 +56,6 @@ public abstract class UserInterface : MonoBehaviour
             _slot.slotDisplay.GetComponentInChildren<Text>().text = "";
         }
     }
-
-    //void Update()
-    //{
-    //    slotsOnInterface.UpdateSlotDisplay();
-    //}
 
     public abstract void CreateSlots();
 

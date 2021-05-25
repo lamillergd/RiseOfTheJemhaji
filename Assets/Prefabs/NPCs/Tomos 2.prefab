@@ -185,7 +185,7 @@ MonoBehaviour:
   - "Phew, you did a good job with that. You\u2019re definitely one of them with skills
     like that!"
   - Aaaand you still look confused. Come on, we need to get across that bridge.
-  - "On the other side you\u2019ll be able to learn more about what happened to you"
+  - "On the other side you\u2019ll be able to learn more about what happened to you."
 --- !u!1 &3304657091739951768
 GameObject:
   m_ObjectHideFlags: 0
